@@ -1,6 +1,7 @@
 /* Rescue 1 Movers — premium, performant, framework-free marketing site */
 :root{--ink:#11161a;--ink2:#1d2429;--red:#e7372e;--red2:#b5221b;--cream:#f5f3ed;--cream2:#e9e7df;--white:#fff;--muted:#5d6366;--grid:#343a3e;--mono:'IBM Plex Mono',monospace;--display:'Barlow Condensed',Impact,'Arial Narrow',sans-serif;--body:'DM Sans',Arial,sans-serif;--ease:cubic-bezier(.22,1,.36,1)}
 *,*::before,*::after{box-sizing:border-box}
+[hidden]{display:none!important}
 html{scroll-behavior:smooth;scroll-padding-top:90px}
 body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--body);-webkit-font-smoothing:antialiased;line-height:1.5}
 body.no-scroll{overflow:hidden}
