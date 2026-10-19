@@ -15,9 +15,15 @@ const ALLOWED=new Set([
  '/services/apartment-moving.html','/services/office-moving.html',
  '/services/long-distance-moving.html','/services/packing-moving-labor.html'
 ]);
+const PHOTO_FILES={
+ '/media/crew-furniture.webp':'snapshot/assets/912b0c6b7cebeab5972b.webp',
+ '/media/crew-doorway.webp':'snapshot/assets/55dee197524ef05c3742.webp',
+ '/media/crew-moving.webp':'snapshot/assets/5d3b6b1812e0c88596b1.webp'
+};
+const MEDIA_PATHS=Object.keys(PHOTO_FILES);
 const MIME={'.html':'text/html; charset=utf-8','.css':'text/css; charset=utf-8',
  '.js':'text/javascript; charset=utf-8','.svg':'image/svg+xml',
- '.txt':'text/plain; charset=utf-8','.xml':'application/xml; charset=utf-8'};
+ '.txt':'text/plain; charset=utf-8','.xml':'application/xml; charset=utf-8','.webp':'image/webp'};
 const DUMMY=hashPassword(crypto.randomBytes(18).toString('base64url'));
 const isProduction=process.env.NODE_ENV==='production';
 const dbDefault=join(ROOT,'var','rescue1.sqlite');
@@ -41,10 +47,13 @@ function headers(res){
  if(isProduction)res.setHeader('Strict-Transport-Security','max-age=31536000');
 }
 async function staticResponse(req,res,path){
- if(!ALLOWED.has(path))return send(res,404,{error:'Not found'});
+ if(!ALLOWED.has(path)&&!MEDIA_PATHS.includes(path))return send(res,404,{error:'Not found'});
  const filename=path==='/'?'index.html':path==='/staff'||path==='/staff/'?'app/ui/index.html':path.startsWith('/staff/')?'app/ui/'+path.slice(7):path.slice(1);
  try{
-  const file=join(ROOT,filename);
+  let file=join(ROOT,filename);
+  try{await stat(file);}catch{
+   if(PHOTO_FILES[path])file=join(ROOT,PHOTO_FILES[path]);
+  }
   if(!(await stat(file)).isFile())return send(res,404,{error:'Not found'});
   const content=await readFile(file);
   const type=MIME[filename.slice(filename.lastIndexOf('.'))]||'application/octet-stream';
