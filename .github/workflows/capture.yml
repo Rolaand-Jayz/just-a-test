@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - ".github/workflows/capture.yml"
+      - "scripts/capture.py"
   workflow_dispatch:
 
 permissions:
