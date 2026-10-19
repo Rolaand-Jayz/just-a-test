@@ -1,6 +1,6 @@
 {
   "origin": "https://www.rescue1movers.com/",
-  "captured_utc": "2026-10-19T03:58:59.945832+00:00",
+  "captured_utc": "2026-10-19T03:59:51.943257+00:00",
   "method": "unauthenticated HTTP GET; original HTML preserved, public static assets copied",
   "known_integrations": [
     "Squarespace CMS/hosting",
@@ -39,8 +39,8 @@
         "content-type": "text/html;charset=utf-8",
         "server": "Squarespace"
       },
-      "bytes": 624281,
-      "sha256": "020d17a9c0d2a446ecffdfc3394bdb1ca5c13a626042738ce3b1d03a50a51d27"
+      "bytes": 128245,
+      "sha256": "b5338176d02af6b0e79c869df5006cda5125a61b3b9df06a2975f62ffa47feb1"
     },
     {
       "url": "https://www.rescue1movers.com/services-content",
@@ -1479,12 +1479,7 @@
   "external_references_not_downloaded": [
     "https://portal.smartmoving.com/embedded/?companyId=fdb2a393-d42d-414e-9045-b456011ed124&branchId=c8c3d508-60bc-44ca-828b-b456011ed219&mode=full"
   ],
-  "errors": [
-    {
-      "url": "https://static1.squarespace.com/static/vta/5c5a519771c10ba3470d8101/versioned-assets/1792079378326-3P84T29X62IH7QZWGRSR/%23check",
-      "error": "404 Client Error: Not Found for url: https://static1.squarespace.com/static/vta/5c5a519771c10ba3470d8101/versioned-assets/1792079378326-3P84T29X62IH7QZWGRSR/%23check"
-    }
-  ],
+  "errors": [],
   "limits": {
     "max_pages": 20,
     "max_assets": 450,
