@@ -1,0 +1,49 @@
+name: Rescue 1 — build and security checks
+on:
+  push:
+    branches: [feat/rescue1-premium-redesign]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22.16.0'
+      - name: Check JavaScript syntax
+        run: |
+          node --check app/server.mjs
+          node --check app/db.mjs
+          node --check app/auth.mjs
+          node --check app/api.mjs
+          node --check app/bootstrap.mjs
+          node --check app/ui/app.js
+          node --check script.js
+      - name: Run full automated tests
+        run: npm test
+      - name: Package independent deployable application
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p dist/rescue1-movers
+          cp -a app services tests index.html 404.html styles.css script.js favicon.svg \
+            robots.txt sitemap.xml moving-guide.html package.json README.md \
+            dist/rescue1-movers/
+          cp -a DEPLOYMENT.md dist/rescue1-movers/
+          tar -C dist -czf rescue1-movers-deployable.tar.gz rescue1-movers
+      - name: Upload ready-to-deploy application bundle
+        uses: actions/upload-artifact@v4
+        with:
+          name: rescue1-movers-deployable
+          path: rescue1-movers-deployable.tar.gz
+          if-no-files-found: error
+          retention-days: 30
