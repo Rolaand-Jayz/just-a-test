@@ -108,6 +108,10 @@ try{
   await snap(browser,{name,path:'/staff',width,height,action:async(page)=>{
    await login(page,credentials.email,credentials.password);
    if(target!=='overview'){
+    if(width<761){
+     await page.locator('#sidebar-toggle').click();
+     await page.locator('#sidebar.open').waitFor({state:'visible'});
+    }
     await page.locator('[data-module="'+target+'"]').click();
     await page.waitForTimeout(500);
    }
