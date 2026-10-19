@@ -6,7 +6,7 @@
  const $$=(s,r=document)=>[...r.querySelectorAll(s)];
  const esc=v=>String(v??'').replace(/[&<>"']/g,x=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[x]));
  const money=n=>'$'+((Number(n)||0)/100).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});
- const friendly=s=>String(s||'').replaceAll('_',' ').replace(/\b[a-z]/g,x=>x.toUpperCase());
+ const friendly=s=>String(s||'').replace(/([a-z])([A-Z])/g,'$1 $2').replaceAll('_',' ').replace(/\b[a-z]/g,x=>x.toUpperCase());
  const date=s=>s?String(s).slice(0,10):'—';
  const $auth=$('#auth-screen'),$workspace=$('#workspace'),$screen=$('#screen'),$nav=$('#nav');
  let user=null,csrf='',grants={},module='overview',records=[],staff=[],toastTimer=null,refreshTimer=null;
