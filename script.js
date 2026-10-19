@@ -51,14 +51,27 @@
   const year = $('#copyright-year');
   if (year) year.textContent = String(new Date().getFullYear());
 
-  // Sticky mobile estimate CTA doesn't overlay the real form.
+  // Avoid displaying a redundant sticky CTA over the actual hero and quote form.
   const floatingQuote = $('.floating-quote');
   const estimate = $('#estimate');
-  if (floatingQuote && estimate && 'IntersectionObserver' in window) {
-    const quoteObserver = new IntersectionObserver(entries => {
-      floatingQuote.classList.toggle('is-hidden', entries.some(item => item.isIntersecting));
-    }, { threshold: 0.05 });
-    quoteObserver.observe(estimate);
+  const hero = $('.hero');
+  if (floatingQuote && estimate && hero) {
+    let estimateVisible = false;
+    const updateFloatingQuote = () => {
+      const heroEnd = hero.offsetTop + hero.offsetHeight - 80;
+      const shouldHide = window.scrollY < heroEnd || estimateVisible;
+      floatingQuote.classList.toggle('is-hidden', shouldHide);
+    };
+    if ('IntersectionObserver' in window) {
+      const quoteObserver = new IntersectionObserver(entries => {
+        estimateVisible = entries.some(item => item.isIntersecting);
+        updateFloatingQuote();
+      }, { threshold: 0.05 });
+      quoteObserver.observe(estimate);
+    }
+    window.addEventListener('scroll', updateFloatingQuote, { passive: true });
+    window.addEventListener('resize', updateFloatingQuote, { passive: true });
+    updateFloatingQuote();
   }
 
   // Move planner. No estimates or prices are fabricated. No data leaves the browser.
