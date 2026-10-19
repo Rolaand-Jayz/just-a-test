@@ -1,6 +1,6 @@
 import crypto from 'node:crypto';
 import { DatabaseSync } from 'node:sqlite';
-import { mkdirSync } from 'node:fs';
+import { mkdirSync, chmodSync } from 'node:fs';
 import { dirname } from 'node:path';
 
 export const ROLES = ['owner','admin','operations','dispatcher','sales','finance','hr','crew'];
@@ -28,6 +28,7 @@ export const STATUSES = {
 export function openDatabase(file) {
   mkdirSync(dirname(file), { recursive:true, mode:0o700 });
   const db = new DatabaseSync(file);
+  chmodSync(file,0o600);
   db.exec('PRAGMA journal_mode=WAL; PRAGMA foreign_keys=ON; PRAGMA busy_timeout=5000;');
   db.exec(`
   CREATE TABLE IF NOT EXISTS staff (
