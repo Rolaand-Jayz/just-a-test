@@ -32,11 +32,31 @@ jobs:
         run: npm test
       - name: Validate production container build
         run: docker build --pull -t rescue1-site:test .
+      - name: Run real Chromium visual review
+        shell: bash
+        run: |
+          set -euo pipefail
+          npm install --no-save --package-lock=false playwright-core@1.56.1
+          export CHROME_BIN="$(command -v google-chrome || command -v chromium || command -v chromium-browser)"
+          mkdir -p visual-review
+          node tests/visual-qa.mjs
+      - name: Upload visual review screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: rescue1-visual-review
+          path: visual-review/
+          if-no-files-found: ignore
+          retention-days: 30
       - name: Package independent deployable application
         shell: bash
         run: |
           set -euo pipefail
           mkdir -p dist/rescue1-movers
+          mkdir -p dist/rescue1-movers/media
+          cp snapshot/assets/912b0c6b7cebeab5972b.webp dist/rescue1-movers/media/crew-furniture.webp
+          cp snapshot/assets/55dee197524ef05c3742.webp dist/rescue1-movers/media/crew-doorway.webp
+          cp snapshot/assets/5d3b6b1812e0c88596b1.webp dist/rescue1-movers/media/crew-moving.webp
           cp -a app services tests scripts Dockerfile compose.yaml .dockerignore index.html 404.html styles.css script.js favicon.svg \
             robots.txt sitemap.xml moving-guide.html package.json README.md \
             dist/rescue1-movers/
