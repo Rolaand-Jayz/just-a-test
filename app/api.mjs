@@ -126,6 +126,7 @@ function handleRecord(db,user,resource,recordId,method,body) {
       if((fields.end_date||row.end_date)<(fields.start_date||row.start_date))throw error(400,'End date precedes start');
     }
   }
+  if(resource==='invoices'&&fields.status==='paid')throw error(400,'Record actual payments rather than setting Paid directly');
   if(resource==='invoices'&&fields.amount_cents!==undefined&&fields.amount_cents<row.paid_cents)throw error(400,'Amount cannot be less than payments recorded');
   if(resource==='invoices'&&row.status==='paid'&&fields.status&&!['paid','void'].includes(fields.status))throw error(400,'A paid invoice cannot become outstanding');
   if(fields.lead_id)ensureReference(db,'leads',fields.lead_id,'Lead');
@@ -211,6 +212,10 @@ function staffPatch(db,user,staffId,body){
   const existing=db.prepare('SELECT id,email,name,role,active FROM staff WHERE id=?').get(staffId);
   if(!existing)throw error(404,'Employee not found');
   if(existing.role==='owner'&&user.role!=='owner')throw error(403,'Cannot edit the owner');
+  if(existing.role==='owner'&&(body.role&&body.role!=='owner'||body.active===false)){
+    const other=db.prepare("SELECT count(*) AS n FROM staff WHERE role='owner' AND active=1 AND id != ?").get(staffId).n;
+    if(!other)throw error(409,'Cannot remove the last active owner');
+  }
   const changes={};
   if(Object.hasOwn(body,'name'))changes.name=cleanText(body.name,'Name',140,true);
   if(Object.hasOwn(body,'email')){
