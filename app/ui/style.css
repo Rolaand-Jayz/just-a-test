@@ -171,3 +171,7 @@ body{background:var(--bg);color:var(--text)}
  .auth-card h1{font-size:clamp(53px,12vw,69px);line-height:1.06}
  .auth-screen{padding-inline:13px}
 }
+
+/* Contrast repair from authenticated screenshot review. */
+.notice strong,.note-panel strong{color:#172820}
+.sidebar .signed-in strong{color:#f8f2df}
