@@ -370,20 +370,20 @@
   });
  }
  $('#login-form').addEventListener('submit',async e=>{
-  e.preventDefault();const btn=$('#login-form button');btn.disabled=true;
+  e.preventDefault();const form=e.currentTarget;const btn=$('#login-form button');btn.disabled=true;
   try{
-   const data=new FormData(e.currentTarget);
+   const data=new FormData(form);
    const result=await api('/api/auth/login',{method:'POST',data:{email:data.get('email'),password:data.get('password')}});
-   e.currentTarget.reset();user=result.user;csrf=result.csrf;grants=result.permissions||{};
+   form.reset();user=result.user;csrf=result.csrf;grants=result.permissions||{};
    if(user.changePassword)passwordView();else workspaceView();
   }catch(err){toast(err.message,true);}finally{btn.disabled=false;}
  });
  $('#password-form').addEventListener('submit',async e=>{
-  e.preventDefault();
-  const data=new FormData(e.currentTarget);
+  e.preventDefault();const form=e.currentTarget;
+  const data=new FormData(form);
   try{
    const result=await api('/api/auth/password',{method:'POST',data:{oldPassword:data.get('current'),newPassword:data.get('next')}});
-   e.currentTarget.reset();user=result.user;csrf=result.csrf;grants=result.permissions;workspaceView();toast('Password updated');
+   form.reset();user=result.user;csrf=result.csrf;grants=result.permissions;workspaceView();toast('Password updated');
   }catch(err){toast(err.message,true);}
  });
  $('#logout').addEventListener('click',async()=>{
