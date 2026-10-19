@@ -3,3 +3,50 @@
 @media(max-width:900px){.workspace{grid-template-columns:1fr}.sidebar{position:fixed;z-index:110;left:0;top:0;bottom:0;width:265px;transform:translateX(-103%);transition:transform .24s;box-shadow:15px 0 35px #0008}.sidebar.open{transform:translateX(0)}.icon-btn{display:block}.work-content{padding:30px 24px 80px}.topbar{padding:0 24px}.live-indicator{display:none}.page-head h1{font-size:59px}}
 @media(max-width:600px){.auth-card{padding:28px 23px;box-shadow:none}.auth-card h1{font-size:69px}.topbar{height:64px;padding:0 15px}.site-link,.crumb-root,.crumb-sep{display:none}.work-content{padding:26px 14px 80px}.page-head{flex-direction:column;align-items:stretch}.page-head h1{font-size:54px}.dashboard-stats{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.stat-card{padding:16px}.stat-label{font-size:9px;min-height:30px}.stat-value{font-size:41px}.dash-panel-head,.table-header{padding:18px}.quick-grid{padding:11px}.quick-action{min-height:106px;padding:13px}.dialog-backdrop{padding:8px;align-items:start}.dialog{max-height:98vh;margin:0}.dialog-header{padding:22px}.dialog-body{padding:20px;grid-template-columns:1fr}.dialog-body label.full{grid-column:auto}.dialog-actions{padding:18px}.report-grid{grid-template-columns:1fr}.auth-corner{display:none}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+
+
+/* Command Center: working editor, crew chat and responsive accounting grids */
+.form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.form-grid>label,.dialog-body>label{display:flex;flex-direction:column;gap:8px;min-width:0;font:700 10px/1.5 var(--mono);letter-spacing:.035em;color:#aebac0}
+.form-grid>label.full{grid-column:1/-1}
+.form-grid input,.form-grid select,.form-grid textarea,
+.dialog-body select,.dialog-body input,.dialog-body textarea,
+.records-toolbar input,.records-toolbar select,
+.chat-compose textarea{width:100%;min-height:43px;padding:11px 13px;background:#10171d;border:1px solid #445158;color:#f4f6f4;border-radius:2px;font-size:13px;outline-offset:3px}
+.form-grid textarea,.chat-compose textarea{min-height:100px;resize:vertical}
+.form-grid input[type=date],.form-grid input[type=time],.form-grid input[type=datetime-local],
+.records-toolbar input[type=date]{color-scheme:dark}
+.form-grid label.checklabel,.checklabel{display:flex;gap:10px;align-items:center;font:600 12px/1.5 var(--body);padding:10px;color:#d5ddde;cursor:pointer}
+.checklabel input[type=checkbox]{width:18px;height:18px;min-height:18px;accent-color:var(--red)}
+.checklabel small{margin-left:auto;color:#85949a}
+.chat-stream{height:380px;max-height:65vh;overflow-y:auto;padding:20px;background:#121b21;border:1px solid #344147;display:flex;flex-direction:column;gap:13px}
+.chat-message{padding:14px 16px;background:#243039;border-left:2px solid var(--red);max-width:min(94%,690px)}
+.chat-message strong{font:800 13px var(--body);margin-right:12px}
+.chat-message small{color:#a6b2b7;font:600 10px var(--mono)}
+.chat-message p{margin:8px 0 0;color:#f0f2f1;line-height:1.55;white-space:pre-wrap;overflow-wrap:anywhere}
+.chat-compose{display:flex;flex-direction:column;gap:11px;padding-top:22px}
+.chat-compose label{font:700 10px var(--mono);color:#a5b3b8}
+.chat-compose .primary{align-self:flex-end}
+.records-toolbar>label{display:flex;align-items:center;gap:10px;color:#bac4c8;font:600 11px var(--mono)}
+.records-toolbar input[type=date],.records-toolbar select{width:auto;min-width:145px}
+.dashboard-stats{grid-template-columns:repeat(auto-fit,minmax(185px,1fr))}
+.form-grid input:focus-visible,.form-grid select:focus-visible,.form-grid textarea:focus-visible,
+.chat-compose textarea:focus-visible{outline:2px solid #f28e7a}
+.permission-table{min-width:970px}
+.permission-table th:first-child{text-align:left;min-width:180px}
+.permission-table td{text-align:center}
+.matrix-check{width:18px;height:18px;accent-color:var(--red)}
+.mini-form{padding:23px;background:#202b31;border:1px solid #435158}
+.footnote{font:400 12px/1.7 var(--body);color:#a4b1b6;margin:18px 0}
+.table-note{font:400 12px/1.7 var(--body);color:#9cacb2}
+.report-card h2{font-family:var(--head);font-size:33px;text-transform:uppercase}
+.report-card p{display:flex;justify-content:space-between;gap:12px;color:#c8d2d5;font-size:13px}
+.report-card strong{color:white}
+@media(max-width:680px){
+ .form-grid{grid-template-columns:1fr}
+ .dialog-body{padding:16px!important}
+ .chat-stream{height:340px}
+ .records-toolbar{flex-wrap:wrap}
+ .records-toolbar>label{flex:1}
+ .records-toolbar input[type=date]{min-width:0}
+}
