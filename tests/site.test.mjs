@@ -9,7 +9,8 @@ const js = readFileSync(new URL('../script.js', import.meta.url), 'utf8');
 test('all local referenced website resources exist', () => {
   const resources = [...html.matchAll(/(?:href|src)="(\.\/[^"]+)"/g)].map(m => m[1].split('?')[0]);
   for (const resource of resources) {
-    assert.ok(existsSync(new URL('..' + resource.slice(1), import.meta.url)), resource + ' must exist');
+    if(resource==='./staff') assert.ok(existsSync(new URL('../app/ui/index.html', import.meta.url)), 'portal route must have an HTML page');
+    else assert.ok(existsSync(new URL('..' + resource.slice(1), import.meta.url)), resource + ' must exist');
   }
   assert.ok(resources.includes('./styles.css'));
   assert.ok(resources.includes('./script.js'));
@@ -33,7 +34,7 @@ test('accessible images and buttons have labels or text', () => {
   assert.match(html, /class="skip-link"/);
   assert.match(html, /aria-expanded="false"/);
   assert.match(html, /aria-controls="mobile-menu"/);
-  assert.match(html, /prefers-reduced-motion:reduce/);
+  assert.match(css, /prefers-reduced-motion:reduce/);
   assert.match(css, /\[hidden\]\{display:none!important\}/);
 });
 
