@@ -832,3 +832,23 @@ body{background:var(--cream);color:var(--ink)}
  .services-title h2{font-size:12vw}
 }
 @media(prefers-reduced-motion:reduce){.firehouse-hero h1 .hero-line-three em{transform:none}.manifesto-marker{transform:none}}
+
+
+/* Visual QA typography repair: Anton has taller glyphs than the previous
+   condensed font. Keep the large type, never let adjacent lines collide. */
+.firehouse-hero h1{line-height:1.035}
+.manifesto h2{line-height:1.06}
+.services-title h2{line-height:1.045}
+.story-copy h2,.areas-text h2,.planner-heading h2,.faq-layout h2,.estimate-copy h2,
+.inner-hero-copy h1,.inner-lead-grid h2,.inner-process h2,.inner-final h2,.guide-hero h1,
+.guide-block h2{line-height:1.045}
+@media(max-width:760px){
+ .firehouse-hero h1{font-size:clamp(79px,18vw,125px);line-height:1.055}
+ .manifesto h2,.services-title h2{line-height:1.065}
+ .inner-hero-copy h1{line-height:1.045}
+}
+@media(max-width:390px){
+ .firehouse-hero h1{font-size:clamp(77px,20.5vw,90px);line-height:1.055}
+ .manifesto h2{font-size:13vw;line-height:1.065}
+ .services-title h2{font-size:12vw;line-height:1.07}
+}
