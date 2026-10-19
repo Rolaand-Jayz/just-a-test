@@ -199,7 +199,7 @@ function staffCreate(db,user,body){
   const role=cleanText(body.role,'Role',25,true);
   if(!emailPattern.test(email)||!ROLES.includes(role))throw error(400,'Invalid email or role');
   if(role==='owner' || (user.role!=='owner'&&['owner','admin','finance','hr'].includes(role)) ||
-    (user.role==='hr'&&role!=='crew'))throw error(403,'Cannot create an employee with that role');
+    (!['owner','admin'].includes(user.role)&&role!=='crew'))throw error(403,'Cannot create an employee with that role');
   const password=crypto.randomBytes(20).toString('base64url');
   const rec={id:id(),name,email,role};
   db.prepare('INSERT INTO staff(id,email,name,role,password_hash,active,change_password,created_at) VALUES (?,?,?,?,?,1,1,?)')
@@ -227,6 +227,7 @@ function staffPatch(db,user,staffId,body){
     if(!ROLES.includes(role)||role==='owner'&&existing.role!=='owner')throw error(403,'Invalid role change');
     if(user.role!=='owner'&&(['owner','admin','finance','hr'].includes(role)||['owner','admin','finance','hr'].includes(existing.role)))throw error(403,'Owner approval required for elevated roles');
     if(user.role==='hr'&&role!=='crew')throw error(403,'HR can only manage crew roles');
+    if(!['owner','admin','hr'].includes(user.role)&&role!==existing.role)throw error(403,'Role assignment requires authorized management');
     changes.role=role;
   }
   if(Object.hasOwn(body,'active')){
