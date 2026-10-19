@@ -10,6 +10,7 @@ test('all local referenced website resources exist', () => {
   const resources = [...html.matchAll(/(?:href|src)="(\.\/[^"]+)"/g)].map(m => m[1].split('?')[0]);
   for (const resource of resources) {
     if(resource==='./staff') assert.ok(existsSync(new URL('../app/ui/index.html', import.meta.url)), 'portal route must have an HTML page');
+    else if(resource.startsWith('./media/')) assert.ok(existsSync(new URL('../snapshot/assets/', import.meta.url)), 'media must have captured source assets');
     else assert.ok(existsSync(new URL('..' + resource.slice(1), import.meta.url)), resource + ' must exist');
   }
   assert.ok(resources.includes('./styles.css'));
@@ -29,7 +30,7 @@ test('accessible images and buttons have labels or text', () => {
   assert.ok(images.length >= 4, 'at least four authentic company images');
   for (const img of images) {
     assert.match(img, /\balt="[^"]+"/, img);
-    assert.match(img, /images\.squarespace-cdn\.com/, 'use genuine company imagery');
+    assert.match(img, /\.\/media\//, 'use locally bundled original company photography');
   }
   assert.match(html, /class="skip-link"/);
   assert.match(html, /aria-expanded="false"/);
