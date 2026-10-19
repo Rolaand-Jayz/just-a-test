@@ -865,3 +865,10 @@ body{background:var(--cream);color:var(--ink)}
  .firehouse-hero h1{font-size:clamp(77px,10.5vw,100px)}
  .firehouse-hero .hero-content{padding-left:24px}
 }
+
+
+/* The long dispatch signal has a shorter masthead format on tablet. */
+@media(min-width:761px) and (max-width:900px){
+ .dispatch-ribbon{gap:13px;padding-inline:25px}
+ .dispatch-ribbon-end{display:none}
+}
