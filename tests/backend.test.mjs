@@ -85,7 +85,7 @@ test('employee time approvals and finance reports work with separation of duties
  assert.equal(time.data.staff_id,crew.user.id);
  assert.equal(time.data.status,'pending');
  const blocked=await request('/api/time/'+time.data.id,{method:'PATCH',session:crew,body:{status:'approved'}});
- assert.equal(blocked.status,200);assert.equal(blocked.data.status,'pending');
+ assert.equal(blocked.status,403);
  const approval=await request('/api/time/'+time.data.id,{method:'PATCH',session:owner,body:{status:'approved'}});
  assert.equal(approval.status,200);assert.equal(approval.data.status,'approved');
  const payroll=await request('/api/payroll?from=2026-12-01&to=2026-12-31',{session:owner});
