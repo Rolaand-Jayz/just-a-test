@@ -160,3 +160,14 @@ body{background:var(--bg);color:var(--text)}
  .page-head h1{font-size:clamp(46px,10vw,65px)}
  .sidebar{box-shadow:10px 0 0 #b9342c25}
 }
+
+
+/* Browser-reviewed sign-in: the long headline must fit within its card. */
+.auth-card h1{font:400 clamp(57px,5.8vw,83px)/1.05 'Anton',Impact,'Arial Narrow',sans-serif;letter-spacing:.005em;overflow-wrap:normal}
+.auth-mark .wordmark{font-family:'Anton',Impact,sans-serif}
+.page-head h1{font-family:'Anton',Impact,sans-serif}
+@media(max-width:680px){
+ .auth-card{padding:30px 24px 27px}
+ .auth-card h1{font-size:clamp(53px,12vw,69px);line-height:1.06}
+ .auth-screen{padding-inline:13px}
+}
