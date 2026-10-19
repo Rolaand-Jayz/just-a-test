@@ -67,7 +67,7 @@ downloaded_bytes = 0
 
 
 def normalize(url: str, parent: str = BASE) -> str | None:
-    if not url or url.startswith(("data:", "javascript:", "mailto:", "tel:", "#")):
+    if not url or url.startswith(("data:", "javascript:", "mailto:", "tel:", "#", "%23")):
         return None
     target = urldefrag(urljoin(parent, url.strip()))[0]
     parsed = urlparse(target)
