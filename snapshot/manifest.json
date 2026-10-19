@@ -1,6 +1,6 @@
 {
   "origin": "https://www.rescue1movers.com/",
-  "captured_utc": "2026-10-19T03:56:45.887797+00:00",
+  "captured_utc": "2026-10-19T03:58:59.945832+00:00",
   "method": "unauthenticated HTTP GET; original HTML preserved, public static assets copied",
   "known_integrations": [
     "Squarespace CMS/hosting",
@@ -14,10 +14,10 @@
       "headers": {
         "content-type": "text/html;charset=utf-8",
         "server": "Squarespace",
-        "etag": "W/\"d7366a65244b9697d3f13a2775b58a28\""
+        "etag": "W/\"bb0b4ac915968bb0c6c3bf6aa4384304\""
       },
-      "bytes": 988467,
-      "sha256": "e7c7801c03fa7b1522f5cb2e8354d43d97c938aaedb5d04e3d670ce41f71dd2b"
+      "bytes": 352923,
+      "sha256": "41552f9641e4805af707983996946d534234c3c1d8e7e9c6a86c09405df62b61"
     },
     {
       "url": "https://www.rescue1movers.com/contact",
@@ -39,8 +39,8 @@
         "content-type": "text/html;charset=utf-8",
         "server": "Squarespace"
       },
-      "bytes": 1181169,
-      "sha256": "bde10ac3fa7687fde1a7b1c89a8e721dcc5726b4246210ce8e7eb66fab69ae84"
+      "bytes": 624281,
+      "sha256": "020d17a9c0d2a446ecffdfc3394bdb1ca5c13a626042738ce3b1d03a50a51d27"
     },
     {
       "url": "https://www.rescue1movers.com/services-content",
@@ -76,6 +76,20 @@
       "content_type": "text/plain"
     },
     {
+      "url": "https://file.squarespace-cdn.com/content/v2/namespaces/fonts/libraries/sqsp/assets/80b34fde-71f2-4a97-95d7-1b51f811d743/latin-ext.woff2",
+      "file": "assets/0cc20efc42fc098d03b5.woff2",
+      "bytes": 4736,
+      "sha256": "0cc20efc42fc098d03b5e4ad5c41772bdb9998b1bfcd4f5c8d8aa9ae2f9d9b6e",
+      "content_type": "font/woff2"
+    },
+    {
+      "url": "https://file.squarespace-cdn.com/content/v2/namespaces/fonts/libraries/sqsp/assets/d31d6438-20e1-48c2-96d5-4cd2bcc1bd65/latin.woff2",
+      "file": "assets/0540caa34774004ee91f.woff2",
+      "bytes": 7624,
+      "sha256": "0540caa34774004ee91f4ca118537e01d360238b4185f42ba77a63df85760cc0",
+      "content_type": "font/woff2"
+    },
+    {
       "url": "https://file.squarespace-cdn.com/content/v2/namespaces/fonts/libraries/sqsp/assets/965710dc-13da-459c-ae08-8c4637b44267/latin.woff2",
       "file": "assets/223a87b672d80aa6dd4c.woff2",
       "bytes": 33280,
@@ -94,62 +108,6 @@
       "file": "assets/742647841da65593df81.woff2",
       "bytes": 29620,
       "sha256": "742647841da65593df8170f19720e306fe61f9ae4d2c520362901edc6615477e",
-      "content_type": "font/woff2"
-    },
-    {
-      "url": "https://file.squarespace-cdn.com/content/v2/namespaces/fonts/libraries/sqsp/assets/0a58bbb9-a5d1-4b88-a2e5-4b2a653a5aee/latin.woff2",
-      "file": "assets/0d8db629af693d21af64.woff2",
-      "bytes": 35184,
-      "sha256": "0d8db629af693d21af64909c7bae436db95e4875230208a5da02437b9a57c1f0",
-      "content_type": "font/woff2"
-    },
-    {
-      "url": "https://file.squarespace-cdn.com/content/v2/namespaces/fonts/libraries/sqsp/assets/e325d791-f335-4a7f-a185-6cde6836a451/latin-ext.woff2",
-      "file": "assets/c9a4cd6289a25aa4b941.woff2",
-      "bytes": 31120,
-      "sha256": "c9a4cd6289a25aa4b941d06bc2027e8ecb9e277634b52fb50a6f5c865fa74651",
-      "content_type": "font/woff2"
-    },
-    {
-      "url": "https://file.squarespace-cdn.com/content/v2/namespaces/fonts/libraries/sqsp/assets/1a10cc27-b61b-4781-927d-84f33ec2f2b1/vietnamese.woff2",
-      "file": "assets/a51b386d9485c9d2679f.woff2",
-      "bytes": 11568,
-      "sha256": "a51b386d9485c9d2679f48214acd858492801acc777d5500a2b0106a12a435f5",
-      "content_type": "font/woff2"
-    },
-    {
-      "url": "https://file.squarespace-cdn.com/content/v2/namespaces/fonts/libraries/sqsp/assets/1556903d-c156-42ed-83e7-c7d03763694c/latin.woff2",
-      "file": "assets/223a87b672d80aa6dd4c.woff2",
-      "bytes": 33280,
-      "sha256": "223a87b672d80aa6dd4c26c072651f2420ecb4b62da544933770566e5046dbc3",
-      "content_type": "font/woff2"
-    },
-    {
-      "url": "https://file.squarespace-cdn.com/content/v2/namespaces/fonts/libraries/sqsp/assets/e3fd57d1-5570-4613-af4c-7e595b4b1ea3/vietnamese.woff2",
-      "file": "assets/eaa239d2626ae96355ba.woff2",
-      "bytes": 10928,
-      "sha256": "eaa239d2626ae96355ba91bb8d0f30654e8e299d9412841dc3ecebc50e096dc9",
-      "content_type": "font/woff2"
-    },
-    {
-      "url": "https://file.squarespace-cdn.com/content/v2/namespaces/fonts/libraries/sqsp/assets/ba7a485b-f8de-4588-8f03-ff1101c29242/latin-ext.woff2",
-      "file": "assets/742647841da65593df81.woff2",
-      "bytes": 29620,
-      "sha256": "742647841da65593df8170f19720e306fe61f9ae4d2c520362901edc6615477e",
-      "content_type": "font/woff2"
-    },
-    {
-      "url": "https://file.squarespace-cdn.com/content/v2/namespaces/fonts/libraries/sqsp/assets/80b34fde-71f2-4a97-95d7-1b51f811d743/latin-ext.woff2",
-      "file": "assets/0cc20efc42fc098d03b5.woff2",
-      "bytes": 4736,
-      "sha256": "0cc20efc42fc098d03b5e4ad5c41772bdb9998b1bfcd4f5c8d8aa9ae2f9d9b6e",
-      "content_type": "font/woff2"
-    },
-    {
-      "url": "https://file.squarespace-cdn.com/content/v2/namespaces/fonts/libraries/sqsp/assets/d31d6438-20e1-48c2-96d5-4cd2bcc1bd65/latin.woff2",
-      "file": "assets/0540caa34774004ee91f.woff2",
-      "bytes": 7624,
-      "sha256": "0540caa34774004ee91f4ca118537e01d360238b4185f42ba77a63df85760cc0",
       "content_type": "font/woff2"
     },
     {
@@ -195,6 +153,48 @@
       "content_type": "font/woff2"
     },
     {
+      "url": "https://file.squarespace-cdn.com/content/v2/namespaces/fonts/libraries/sqsp/assets/0a58bbb9-a5d1-4b88-a2e5-4b2a653a5aee/latin.woff2",
+      "file": "assets/0d8db629af693d21af64.woff2",
+      "bytes": 35184,
+      "sha256": "0d8db629af693d21af64909c7bae436db95e4875230208a5da02437b9a57c1f0",
+      "content_type": "font/woff2"
+    },
+    {
+      "url": "https://file.squarespace-cdn.com/content/v2/namespaces/fonts/libraries/sqsp/assets/e325d791-f335-4a7f-a185-6cde6836a451/latin-ext.woff2",
+      "file": "assets/c9a4cd6289a25aa4b941.woff2",
+      "bytes": 31120,
+      "sha256": "c9a4cd6289a25aa4b941d06bc2027e8ecb9e277634b52fb50a6f5c865fa74651",
+      "content_type": "font/woff2"
+    },
+    {
+      "url": "https://file.squarespace-cdn.com/content/v2/namespaces/fonts/libraries/sqsp/assets/1a10cc27-b61b-4781-927d-84f33ec2f2b1/vietnamese.woff2",
+      "file": "assets/a51b386d9485c9d2679f.woff2",
+      "bytes": 11568,
+      "sha256": "a51b386d9485c9d2679f48214acd858492801acc777d5500a2b0106a12a435f5",
+      "content_type": "font/woff2"
+    },
+    {
+      "url": "https://file.squarespace-cdn.com/content/v2/namespaces/fonts/libraries/sqsp/assets/1556903d-c156-42ed-83e7-c7d03763694c/latin.woff2",
+      "file": "assets/223a87b672d80aa6dd4c.woff2",
+      "bytes": 33280,
+      "sha256": "223a87b672d80aa6dd4c26c072651f2420ecb4b62da544933770566e5046dbc3",
+      "content_type": "font/woff2"
+    },
+    {
+      "url": "https://file.squarespace-cdn.com/content/v2/namespaces/fonts/libraries/sqsp/assets/e3fd57d1-5570-4613-af4c-7e595b4b1ea3/vietnamese.woff2",
+      "file": "assets/eaa239d2626ae96355ba.woff2",
+      "bytes": 10928,
+      "sha256": "eaa239d2626ae96355ba91bb8d0f30654e8e299d9412841dc3ecebc50e096dc9",
+      "content_type": "font/woff2"
+    },
+    {
+      "url": "https://file.squarespace-cdn.com/content/v2/namespaces/fonts/libraries/sqsp/assets/ba7a485b-f8de-4588-8f03-ff1101c29242/latin-ext.woff2",
+      "file": "assets/742647841da65593df81.woff2",
+      "bytes": 29620,
+      "sha256": "742647841da65593df8170f19720e306fe61f9ae4d2c520362901edc6615477e",
+      "content_type": "font/woff2"
+    },
+    {
       "url": "https://assets.squarespace.com/@sqs/polyfiller/1.7.7/modern.js",
       "file": "assets/0dc9e95ef5f68667ef8a.js",
       "bytes": 32889,
@@ -209,10 +209,10 @@
       "content_type": "text/javascript"
     },
     {
-      "url": "https://assets.squarespace.com/universal/scripts-compressed/extract-css-runtime-6dcf54508471bdd9-min.en-US.js",
-      "file": "assets/53a0151e44847c096154.js",
-      "bytes": 51512,
-      "sha256": "53a0151e44847c096154121d5e1895f5895b1d28a6e3a0c4884ec293679ba7d7",
+      "url": "https://assets.squarespace.com/universal/scripts-compressed/extract-css-runtime-b1e8cfe0d013fba5-min.en-US.js",
+      "file": "assets/455891c20ceb0169f584.js",
+      "bytes": 51540,
+      "sha256": "455891c20ceb0169f584fe8646230477125c2397dca792750ddede29399af54a",
       "content_type": "text/javascript"
     },
     {
@@ -244,17 +244,17 @@
       "content_type": "text/javascript"
     },
     {
-      "url": "https://assets.squarespace.com/universal/scripts-compressed/common-959763908f32d3c9-min.en-US.js",
-      "file": "assets/fb12780fd4a671e99685.js",
-      "bytes": 989441,
-      "sha256": "fb12780fd4a671e996858b8e258e6cc0d345bca2897494ee3ab11b4c131c5f47",
+      "url": "https://assets.squarespace.com/universal/scripts-compressed/common-7d289a9a1e9549aa-min.en-US.js",
+      "file": "assets/495f2aebf8f9948b5c6d.js",
+      "bytes": 989479,
+      "sha256": "495f2aebf8f9948b5c6d1e14b9e813194243dfaf89bbea2344fbcd648558460f",
       "content_type": "text/javascript"
     },
     {
-      "url": "https://assets.squarespace.com/universal/scripts-compressed/user-account-core-8f3e840f0d8db11e-min.en-US.js",
-      "file": "assets/9a0c462f6c776eb9b363.js",
-      "bytes": 80215,
-      "sha256": "9a0c462f6c776eb9b3633c8f6dea6d4ac685d5d13672b3c78d258e3caf4db21a",
+      "url": "https://assets.squarespace.com/universal/scripts-compressed/user-account-core-ca99048170e8f83d-min.en-US.js",
+      "file": "assets/1c804ea72fc899a86e0d.js",
+      "bytes": 80706,
+      "sha256": "1c804ea72fc899a86e0dbdcea6bb942d56dd7b34271aaa759418363fcdf5f5d1",
       "content_type": "text/javascript"
     },
     {
@@ -265,11 +265,172 @@
       "content_type": "text/css"
     },
     {
-      "url": "https://assets.squarespace.com/universal/scripts-compressed/performance-a20c61231e904003-min.en-US.js",
-      "file": "assets/ee105aef2b4e07ffced8.js",
+      "url": "https://assets.squarespace.com/universal/scripts-compressed/performance-d93749be3aac86ef-min.en-US.js",
+      "file": "assets/eb3849faea0cf9509b50.js",
       "bytes": 123368,
-      "sha256": "ee105aef2b4e07ffced84bf5a02394b5e386447bd18ed10dda4412f970ad184b",
+      "sha256": "eb3849faea0cf9509b50877e27237ba78ae76697acdb380f62ad165e97bd3235",
       "content_type": "text/javascript"
+    },
+    {
+      "url": "https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.html/09e3d24c-5e70-4672-9707-dc0028faf701_994/website.components.html.styles.css",
+      "file": "assets/62851efff91ee5fe72ce.css",
+      "bytes": 105,
+      "sha256": "62851efff91ee5fe72cea604fca72bbd29cfe282a517f1cbca5ba647285a1b65",
+      "content_type": "text/css; charset=utf-8"
+    },
+    {
+      "url": "https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.embed/2025959f-c7f4-4511-98b2-307250f232e1_739/website.components.embed.styles.css",
+      "file": "assets/b0a7c7b76b1b3ef41fcb.css",
+      "bytes": 2265,
+      "sha256": "b0a7c7b76b1b3ef41fcb3db406a79dc3d4b8daafc3443b6ab436a3322a8a0af7",
+      "content_type": "text/css; charset=utf-8"
+    },
+    {
+      "url": "https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.imageFluid/45d5f410-54c1-4b0e-9da7-ae189c5cf6ab_981/website.components.imageFluid.styles.css",
+      "file": "assets/e6a9736ab3392fab2fd6.css",
+      "bytes": 2578,
+      "sha256": "e6a9736ab3392fab2fd6702a1b530cec9b5243c68c77cefcd1004bf377bcae69",
+      "content_type": "text/css; charset=utf-8"
+    },
+    {
+      "url": "https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.shape/841d730d-461f-4024-91db-3b38d3c5a2bb_1389/website.components.shape.styles.css",
+      "file": "assets/a5ff60bd6ab146487970.css",
+      "bytes": 1150,
+      "sha256": "a5ff60bd6ab146487970d64c25a9392d6f069e819573cc8c24693fb4f6ac606b",
+      "content_type": "text/css; charset=utf-8"
+    },
+    {
+      "url": "https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.button/5c251eae-5d12-4683-8c74-5bac1112ae77_1164/website.components.button.styles.css",
+      "file": "assets/1ae84d9f9687b4d101a7.css",
+      "bytes": 1087,
+      "sha256": "1ae84d9f9687b4d101a7e87382c7a11b8029157df95de292ad48ac87f209f912",
+      "content_type": "text/css; charset=utf-8"
+    },
+    {
+      "url": "https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.socialLinks/d1a28e08-6d99-46a7-b4e0-e61aac178ecf_772/website.components.socialLinks.styles.css",
+      "file": "assets/ecb4d6d01d535788189b.css",
+      "bytes": 12029,
+      "sha256": "ecb4d6d01d535788189bc6ea40c9e2e3bba6adcfc7f5a79aa69fc76fa64c9b68",
+      "content_type": "text/css; charset=utf-8"
+    },
+    {
+      "url": "https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.imageFluid/45d5f410-54c1-4b0e-9da7-ae189c5cf6ab_981/39188.js",
+      "file": "assets/0b1b1ceb705c593a24dd.js",
+      "bytes": 20695,
+      "sha256": "0b1b1ceb705c593a24dd78fd7c044e164af08f2768df23dc92f7c9961fe07d5a",
+      "content_type": "application/javascript; charset=utf-8"
+    },
+    {
+      "url": "https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.imageFluid/45d5f410-54c1-4b0e-9da7-ae189c5cf6ab_981/website.components.imageFluid.shared.constants.js",
+      "file": "assets/a7c8fc9984131654def3.js",
+      "bytes": 945,
+      "sha256": "a7c8fc9984131654def3175a8747e54702c16ea9f01ee535459939e220928cb3",
+      "content_type": "application/javascript; charset=utf-8"
+    },
+    {
+      "url": "https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.imageFluid/45d5f410-54c1-4b0e-9da7-ae189c5cf6ab_981/64023.js",
+      "file": "assets/f37638d890c0b263eaab.js",
+      "bytes": 34062,
+      "sha256": "f37638d890c0b263eaabc90370869634619b799194db1ae705fbda2eb62607d2",
+      "content_type": "application/javascript; charset=utf-8"
+    },
+    {
+      "url": "https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.imageFluid/45d5f410-54c1-4b0e-9da7-ae189c5cf6ab_981/18018.js",
+      "file": "assets/0733334ad61c66fc9ea8.js",
+      "bytes": 12975,
+      "sha256": "0733334ad61c66fc9ea81b2285b52efb4c90481e1a84d3be636039b2a3e9a8f7",
+      "content_type": "application/javascript; charset=utf-8"
+    },
+    {
+      "url": "https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.imageFluid/45d5f410-54c1-4b0e-9da7-ae189c5cf6ab_981/92452.js",
+      "file": "assets/48d2eecda6ad61c92b02.js",
+      "bytes": 38848,
+      "sha256": "48d2eecda6ad61c92b0203bbea14039c88aa25315404282879e31396bcaca134",
+      "content_type": "application/javascript; charset=utf-8"
+    },
+    {
+      "url": "https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.imageFluid/45d5f410-54c1-4b0e-9da7-ae189c5cf6ab_981/image-effect-parallax.js",
+      "file": "assets/8ecdbece6dcae823cfbc.js",
+      "bytes": 5830,
+      "sha256": "8ecdbece6dcae823cfbc76f0ea49099d6a0df8fe5a9efcf4a2fb2248ac91b2fd",
+      "content_type": "application/javascript; charset=utf-8"
+    },
+    {
+      "url": "https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.button/5c251eae-5d12-4683-8c74-5bac1112ae77_1164/website.components.button.visitor.js",
+      "file": "assets/6e290fc1dc99dc1182bc.js",
+      "bytes": 11107,
+      "sha256": "6e290fc1dc99dc1182bc0c3af8cc815a79a970ba19f1f863ec13b62019fa7708",
+      "content_type": "application/javascript; charset=utf-8"
+    },
+    {
+      "url": "https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.imageFluid/45d5f410-54c1-4b0e-9da7-ae189c5cf6ab_981/image-effect-refracted-circles.js",
+      "file": "assets/a02032eeb90e66c32395.js",
+      "bytes": 2672,
+      "sha256": "a02032eeb90e66c32395b21a3c15f466150af40ecfd7b68c927ff6696121789a",
+      "content_type": "application/javascript; charset=utf-8"
+    },
+    {
+      "url": "https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.shape/841d730d-461f-4024-91db-3b38d3c5a2bb_1389/website.components.shape.visitor.js",
+      "file": "assets/e2b86dc181fb350aa4a3.js",
+      "bytes": 17335,
+      "sha256": "e2b86dc181fb350aa4a359d8aa8627c024ed76989b6848680f56f96c6527d766",
+      "content_type": "application/javascript; charset=utf-8"
+    },
+    {
+      "url": "https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.html/09e3d24c-5e70-4672-9707-dc0028faf701_994/website.components.html.visitor.js",
+      "file": "assets/78cf3656a0e71f92b8da.js",
+      "bytes": 11026,
+      "sha256": "78cf3656a0e71f92b8da2c7bd76a4bebef48eb02406c1b6a91fd15cd842ee5e8",
+      "content_type": "application/javascript; charset=utf-8"
+    },
+    {
+      "url": "https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.imageFluid/45d5f410-54c1-4b0e-9da7-ae189c5cf6ab_981/39882.js",
+      "file": "assets/5f64de00e4039c945b30.js",
+      "bytes": 10236,
+      "sha256": "5f64de00e4039c945b30094b15453c07532e43cf64f05c81b68da4ea8b37ec91",
+      "content_type": "application/javascript; charset=utf-8"
+    },
+    {
+      "url": "https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.imageFluid/45d5f410-54c1-4b0e-9da7-ae189c5cf6ab_981/website.components.imageFluid.visitor.js",
+      "file": "assets/6ad70d4014d07ded667e.js",
+      "bytes": 26681,
+      "sha256": "6ad70d4014d07ded667e090d1f5c3bcc1d536f616bd5717c60efe6e337e83531",
+      "content_type": "application/javascript; charset=utf-8"
+    },
+    {
+      "url": "https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.socialLinks/d1a28e08-6d99-46a7-b4e0-e61aac178ecf_772/website.components.socialLinks.visitor.js",
+      "file": "assets/97fd8330070a903c3862.js",
+      "bytes": 12228,
+      "sha256": "97fd8330070a903c3862216d6997186a42bcae54115c656c207a9f9b500def27",
+      "content_type": "application/javascript; charset=utf-8"
+    },
+    {
+      "url": "https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.imageFluid/45d5f410-54c1-4b0e-9da7-ae189c5cf6ab_981/image-effect-refracted-lines.js",
+      "file": "assets/3de1c0cc097e56c7b803.js",
+      "bytes": 11778,
+      "sha256": "3de1c0cc097e56c7b8033c786d70d729c125dd8ae6e06c24c8d8b01ea144c274",
+      "content_type": "application/javascript; charset=utf-8"
+    },
+    {
+      "url": "https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.imageFluid/45d5f410-54c1-4b0e-9da7-ae189c5cf6ab_981/image-effect-film-grain.js",
+      "file": "assets/4d697b03c93318d3e887.js",
+      "bytes": 8095,
+      "sha256": "4d697b03c93318d3e8872cee54e46c12797409c5f52609701f072196ca052a0b",
+      "content_type": "application/javascript; charset=utf-8"
+    },
+    {
+      "url": "https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.imageFluid/45d5f410-54c1-4b0e-9da7-ae189c5cf6ab_981/image-effect-liquid.js",
+      "file": "assets/b3cab4db3a26d396fa36.js",
+      "bytes": 8569,
+      "sha256": "b3cab4db3a26d396fa36662b66918482e89c74082a58a126e783a2d02b13e05c",
+      "content_type": "application/javascript; charset=utf-8"
+    },
+    {
+      "url": "https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.embed/2025959f-c7f4-4511-98b2-307250f232e1_739/website.components.embed.visitor.js",
+      "file": "assets/0914a2d17e192d1e4b1b.js",
+      "bytes": 18526,
+      "sha256": "0914a2d17e192d1e4b1b361217cd6020f623bdc203d4e35cf6c45d20964bcab1",
+      "content_type": "application/javascript; charset=utf-8"
     },
     {
       "url": "https://static1.squarespace.com/static/versioned-site-css/6a0b9b967b69be254327c65b/13/5c5a519771c10ba3470d8101/6a0b9b977b69be254327c67b/1841/site.css?nocustom=true",
@@ -287,567 +448,567 @@
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/d0f3c196-be9b-4aab-a106-4a643bd8f222/rlogo.png?format=1500w",
-      "file": "assets/31caf3865aedc06ef585.png",
+      "file": "assets/31caf3865aedc06ef585.webp",
       "bytes": 109394,
       "sha256": "31caf3865aedc06ef585f7c1bc0e3bf12dc913172f774e68e8395634dd7ab46f",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/24f6ce9c-d13d-42a0-a924-e2155bae6d22/SCRL_0001.JPG",
-      "file": "assets/5d3b6b1812e0c88596b1.jpg",
+      "file": "assets/5d3b6b1812e0c88596b1.webp",
       "bytes": 311498,
       "sha256": "5d3b6b1812e0c88596b16b32420b03d1ef6ecc3ff95d74b252e7399fa0c0e21c",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/24f6ce9c-d13d-42a0-a924-e2155bae6d22/SCRL_0001.JPG?format=100w",
-      "file": "assets/d0f99c2e30ba62f5fabc.jpg",
+      "file": "assets/d0f99c2e30ba62f5fabc.webp",
       "bytes": 3284,
       "sha256": "d0f99c2e30ba62f5fabcef44da05339e6055660dd144908da9c8bab240037d4d",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/24f6ce9c-d13d-42a0-a924-e2155bae6d22/SCRL_0001.JPG?format=300w",
-      "file": "assets/188f023d0b4c98ce9a07.jpg",
+      "file": "assets/188f023d0b4c98ce9a07.webp",
       "bytes": 15128,
       "sha256": "188f023d0b4c98ce9a0727629269ae97d15306717b3e7c0062cb8cfb78307d97",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/24f6ce9c-d13d-42a0-a924-e2155bae6d22/SCRL_0001.JPG?format=500w",
-      "file": "assets/d91583c2fa23bdf4ab90.jpg",
+      "file": "assets/d91583c2fa23bdf4ab90.webp",
       "bytes": 35012,
       "sha256": "d91583c2fa23bdf4ab90b34bd456aadccf6072081e5ab74fdce9e98f5fe590e9",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/24f6ce9c-d13d-42a0-a924-e2155bae6d22/SCRL_0001.JPG?format=750w",
-      "file": "assets/53de7ec7a761eed81869.jpg",
+      "file": "assets/53de7ec7a761eed81869.webp",
       "bytes": 67794,
       "sha256": "53de7ec7a761eed81869820e1539f4b3be0e336d121334869e7c175bb7515819",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/24f6ce9c-d13d-42a0-a924-e2155bae6d22/SCRL_0001.JPG?format=1000w",
-      "file": "assets/fce9cfdc02223c2643cd.jpg",
+      "file": "assets/fce9cfdc02223c2643cd.webp",
       "bytes": 102520,
       "sha256": "fce9cfdc02223c2643cdd6f34c98a417d860789d1010df41c58fdc23db26c131",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/24f6ce9c-d13d-42a0-a924-e2155bae6d22/SCRL_0001.JPG?format=1500w",
-      "file": "assets/4cf8c1736107d5924c49.jpg",
+      "file": "assets/4cf8c1736107d5924c49.webp",
       "bytes": 187342,
       "sha256": "4cf8c1736107d5924c49d5ff1babf45417f6669746ca9d5de4545b57b94a9d05",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/24f6ce9c-d13d-42a0-a924-e2155bae6d22/SCRL_0001.JPG?format=2500w",
-      "file": "assets/5d3b6b1812e0c88596b1.jpg",
+      "file": "assets/5d3b6b1812e0c88596b1.webp",
       "bytes": 311498,
       "sha256": "5d3b6b1812e0c88596b16b32420b03d1ef6ecc3ff95d74b252e7399fa0c0e21c",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/959cf5af-3926-427d-9230-30d41633c831/r1mweb.png",
-      "file": "assets/42b6a318bcc12be2fd9a.png",
+      "file": "assets/42b6a318bcc12be2fd9a.webp",
       "bytes": 25492,
       "sha256": "42b6a318bcc12be2fd9a71db6ac3120f1e75cb64bc8c9db56e87ab19492f4003",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/959cf5af-3926-427d-9230-30d41633c831/r1mweb.png?format=100w",
-      "file": "assets/d075ed66b9cbe1e654b1.png",
+      "file": "assets/d075ed66b9cbe1e654b1.webp",
       "bytes": 9002,
       "sha256": "d075ed66b9cbe1e654b1b8d77ff5ac76dbb7dea7e10b62b5a79df2642099de41",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/959cf5af-3926-427d-9230-30d41633c831/r1mweb.png?format=300w",
-      "file": "assets/e148dc0c653070f88d5c.png",
+      "file": "assets/e148dc0c653070f88d5c.webp",
       "bytes": 30378,
       "sha256": "e148dc0c653070f88d5cc5b29eb7505f678b62023ae4c2a7d58a4c8f09a50098",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/959cf5af-3926-427d-9230-30d41633c831/r1mweb.png?format=500w",
-      "file": "assets/42b6a318bcc12be2fd9a.png",
+      "file": "assets/42b6a318bcc12be2fd9a.webp",
       "bytes": 25492,
       "sha256": "42b6a318bcc12be2fd9a71db6ac3120f1e75cb64bc8c9db56e87ab19492f4003",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/959cf5af-3926-427d-9230-30d41633c831/r1mweb.png?format=750w",
-      "file": "assets/42b6a318bcc12be2fd9a.png",
+      "file": "assets/42b6a318bcc12be2fd9a.webp",
       "bytes": 25492,
       "sha256": "42b6a318bcc12be2fd9a71db6ac3120f1e75cb64bc8c9db56e87ab19492f4003",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/959cf5af-3926-427d-9230-30d41633c831/r1mweb.png?format=1000w",
-      "file": "assets/42b6a318bcc12be2fd9a.png",
+      "file": "assets/42b6a318bcc12be2fd9a.webp",
       "bytes": 25492,
       "sha256": "42b6a318bcc12be2fd9a71db6ac3120f1e75cb64bc8c9db56e87ab19492f4003",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/959cf5af-3926-427d-9230-30d41633c831/r1mweb.png?format=1500w",
-      "file": "assets/42b6a318bcc12be2fd9a.png",
+      "file": "assets/42b6a318bcc12be2fd9a.webp",
       "bytes": 25492,
       "sha256": "42b6a318bcc12be2fd9a71db6ac3120f1e75cb64bc8c9db56e87ab19492f4003",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/959cf5af-3926-427d-9230-30d41633c831/r1mweb.png?format=2500w",
-      "file": "assets/42b6a318bcc12be2fd9a.png",
+      "file": "assets/42b6a318bcc12be2fd9a.webp",
       "bytes": 25492,
       "sha256": "42b6a318bcc12be2fd9a71db6ac3120f1e75cb64bc8c9db56e87ab19492f4003",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/454fbe0f-e314-4881-b0cf-7717181253ec/r1mweb.png",
-      "file": "assets/fc89feba2bfe5bd8e7fc.png",
+      "file": "assets/fc89feba2bfe5bd8e7fc.webp",
       "bytes": 10892,
       "sha256": "fc89feba2bfe5bd8e7fccc5ea48918bdbe015c7c6fca84131901568d77c79593",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/454fbe0f-e314-4881-b0cf-7717181253ec/r1mweb.png?format=100w",
-      "file": "assets/48bd18318a2df748b05b.png",
+      "file": "assets/48bd18318a2df748b05b.webp",
       "bytes": 4888,
       "sha256": "48bd18318a2df748b05b05f5d28ff7b06bc3057711af7e2e5c96c036e850145f",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/454fbe0f-e314-4881-b0cf-7717181253ec/r1mweb.png?format=300w",
-      "file": "assets/5f3a27aea91ca0641b61.png",
+      "file": "assets/5f3a27aea91ca0641b61.webp",
       "bytes": 12946,
       "sha256": "5f3a27aea91ca0641b61a4b7e01ae25561f5a9ad7cb7fbdfda33f1e47c594a38",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/454fbe0f-e314-4881-b0cf-7717181253ec/r1mweb.png?format=500w",
-      "file": "assets/fc89feba2bfe5bd8e7fc.png",
+      "file": "assets/fc89feba2bfe5bd8e7fc.webp",
       "bytes": 10892,
       "sha256": "fc89feba2bfe5bd8e7fccc5ea48918bdbe015c7c6fca84131901568d77c79593",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/454fbe0f-e314-4881-b0cf-7717181253ec/r1mweb.png?format=750w",
-      "file": "assets/fc89feba2bfe5bd8e7fc.png",
+      "file": "assets/fc89feba2bfe5bd8e7fc.webp",
       "bytes": 10892,
       "sha256": "fc89feba2bfe5bd8e7fccc5ea48918bdbe015c7c6fca84131901568d77c79593",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/454fbe0f-e314-4881-b0cf-7717181253ec/r1mweb.png?format=1000w",
-      "file": "assets/fc89feba2bfe5bd8e7fc.png",
+      "file": "assets/fc89feba2bfe5bd8e7fc.webp",
       "bytes": 10892,
       "sha256": "fc89feba2bfe5bd8e7fccc5ea48918bdbe015c7c6fca84131901568d77c79593",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/454fbe0f-e314-4881-b0cf-7717181253ec/r1mweb.png?format=1500w",
-      "file": "assets/fc89feba2bfe5bd8e7fc.png",
+      "file": "assets/fc89feba2bfe5bd8e7fc.webp",
       "bytes": 10892,
       "sha256": "fc89feba2bfe5bd8e7fccc5ea48918bdbe015c7c6fca84131901568d77c79593",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/454fbe0f-e314-4881-b0cf-7717181253ec/r1mweb.png?format=2500w",
-      "file": "assets/fc89feba2bfe5bd8e7fc.png",
+      "file": "assets/fc89feba2bfe5bd8e7fc.webp",
       "bytes": 10892,
       "sha256": "fc89feba2bfe5bd8e7fccc5ea48918bdbe015c7c6fca84131901568d77c79593",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/8434c6cc-bf5c-4ca3-8933-5f37ce7aca4e/r1mweb.png",
-      "file": "assets/bd83100705c7fac7e5ba.png",
+      "file": "assets/bd83100705c7fac7e5ba.webp",
       "bytes": 14898,
       "sha256": "bd83100705c7fac7e5ba0f0ac52b368f579529a7a2042ab459ef15096bd94cf9",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/8434c6cc-bf5c-4ca3-8933-5f37ce7aca4e/r1mweb.png?format=100w",
-      "file": "assets/5e8ffec7f1751735c3a1.png",
+      "file": "assets/5e8ffec7f1751735c3a1.webp",
       "bytes": 6430,
       "sha256": "5e8ffec7f1751735c3a1e70790c5280fd86eb22a55f4833228896fa2e7aae8a9",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/8434c6cc-bf5c-4ca3-8933-5f37ce7aca4e/r1mweb.png?format=300w",
-      "file": "assets/4249237f4f126ddf946a.png",
+      "file": "assets/4249237f4f126ddf946a.webp",
       "bytes": 19458,
       "sha256": "4249237f4f126ddf946a77a5a65d806b5432a49b60b140b0ee4e283b97772f8f",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/8434c6cc-bf5c-4ca3-8933-5f37ce7aca4e/r1mweb.png?format=500w",
-      "file": "assets/bd83100705c7fac7e5ba.png",
+      "file": "assets/bd83100705c7fac7e5ba.webp",
       "bytes": 14898,
       "sha256": "bd83100705c7fac7e5ba0f0ac52b368f579529a7a2042ab459ef15096bd94cf9",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/8434c6cc-bf5c-4ca3-8933-5f37ce7aca4e/r1mweb.png?format=750w",
-      "file": "assets/bd83100705c7fac7e5ba.png",
+      "file": "assets/bd83100705c7fac7e5ba.webp",
       "bytes": 14898,
       "sha256": "bd83100705c7fac7e5ba0f0ac52b368f579529a7a2042ab459ef15096bd94cf9",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/8434c6cc-bf5c-4ca3-8933-5f37ce7aca4e/r1mweb.png?format=1000w",
-      "file": "assets/bd83100705c7fac7e5ba.png",
+      "file": "assets/bd83100705c7fac7e5ba.webp",
       "bytes": 14898,
       "sha256": "bd83100705c7fac7e5ba0f0ac52b368f579529a7a2042ab459ef15096bd94cf9",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/8434c6cc-bf5c-4ca3-8933-5f37ce7aca4e/r1mweb.png?format=1500w",
-      "file": "assets/bd83100705c7fac7e5ba.png",
+      "file": "assets/bd83100705c7fac7e5ba.webp",
       "bytes": 14898,
       "sha256": "bd83100705c7fac7e5ba0f0ac52b368f579529a7a2042ab459ef15096bd94cf9",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/8434c6cc-bf5c-4ca3-8933-5f37ce7aca4e/r1mweb.png?format=2500w",
-      "file": "assets/bd83100705c7fac7e5ba.png",
+      "file": "assets/bd83100705c7fac7e5ba.webp",
       "bytes": 14898,
       "sha256": "bd83100705c7fac7e5ba0f0ac52b368f579529a7a2042ab459ef15096bd94cf9",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/a41eabb3-e25f-42ca-bd68-fafe82e492e5/IMG_2098+2.JPG",
-      "file": "assets/7dff00d579cf99b36eac.jpg",
+      "file": "assets/7dff00d579cf99b36eac.webp",
       "bytes": 135772,
       "sha256": "7dff00d579cf99b36eac731df9c0f60787d52b73a2f4c1b52139939b5c2c9298",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/a41eabb3-e25f-42ca-bd68-fafe82e492e5/IMG_2098+2.JPG?format=100w",
-      "file": "assets/3064fb1b8fc8c18c5d0e.jpg",
+      "file": "assets/3064fb1b8fc8c18c5d0e.webp",
       "bytes": 3814,
       "sha256": "3064fb1b8fc8c18c5d0e6d01c1117c66a0f8f43161626f37468e1bbc7a352664",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/a41eabb3-e25f-42ca-bd68-fafe82e492e5/IMG_2098+2.JPG?format=300w",
-      "file": "assets/fd36bc2fd390dc251a68.jpg",
+      "file": "assets/fd36bc2fd390dc251a68.webp",
       "bytes": 19792,
       "sha256": "fd36bc2fd390dc251a68563b4e6df412af057bce748c69388213c33388142184",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/a41eabb3-e25f-42ca-bd68-fafe82e492e5/IMG_2098+2.JPG?format=500w",
-      "file": "assets/fbbcf4e088e252def762.jpg",
+      "file": "assets/fbbcf4e088e252def762.webp",
       "bytes": 42926,
       "sha256": "fbbcf4e088e252def762912601d5cf1c8cc93ad0478ddba8fbbd0d70bda89402",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/a41eabb3-e25f-42ca-bd68-fafe82e492e5/IMG_2098+2.JPG?format=750w",
-      "file": "assets/ccb01fc81e39282e6edb.jpg",
+      "file": "assets/ccb01fc81e39282e6edb.webp",
       "bytes": 76926,
       "sha256": "ccb01fc81e39282e6edb1667c20326a210b5f9b60bccc4e92e379702e7dce23f",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/a41eabb3-e25f-42ca-bd68-fafe82e492e5/IMG_2098+2.JPG?format=1000w",
-      "file": "assets/d70557d883140d77ceb9.jpg",
+      "file": "assets/d70557d883140d77ceb9.webp",
       "bytes": 116398,
       "sha256": "d70557d883140d77ceb9138f253ad4762d8b35230f7ec3d622734bb5f328f64c",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/a41eabb3-e25f-42ca-bd68-fafe82e492e5/IMG_2098+2.JPG?format=1500w",
-      "file": "assets/7dff00d579cf99b36eac.jpg",
+      "file": "assets/7dff00d579cf99b36eac.webp",
       "bytes": 135772,
       "sha256": "7dff00d579cf99b36eac731df9c0f60787d52b73a2f4c1b52139939b5c2c9298",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/a41eabb3-e25f-42ca-bd68-fafe82e492e5/IMG_2098+2.JPG?format=2500w",
-      "file": "assets/7dff00d579cf99b36eac.jpg",
+      "file": "assets/7dff00d579cf99b36eac.webp",
       "bytes": 135772,
       "sha256": "7dff00d579cf99b36eac731df9c0f60787d52b73a2f4c1b52139939b5c2c9298",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/af4385fe-a3a8-472c-a1af-1edefd1c84ec/google-reviews-logo.png",
-      "file": "assets/b0af6d80e91e6f25c2a8.png",
+      "file": "assets/b0af6d80e91e6f25c2a8.webp",
       "bytes": 23378,
       "sha256": "b0af6d80e91e6f25c2a81cf4d129f9922f0c764cec14bcc92a6fb3a1329d4428",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/af4385fe-a3a8-472c-a1af-1edefd1c84ec/google-reviews-logo.png?format=100w",
-      "file": "assets/8088ecaf01f7ea824648.png",
+      "file": "assets/8088ecaf01f7ea824648.webp",
       "bytes": 9672,
       "sha256": "8088ecaf01f7ea824648cb80fcf42d6b0a37e7c9ae30e251dec760e5e3479205",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/af4385fe-a3a8-472c-a1af-1edefd1c84ec/google-reviews-logo.png?format=300w",
-      "file": "assets/5159e1a44e279f041fe9.png",
+      "file": "assets/5159e1a44e279f041fe9.webp",
       "bytes": 15478,
       "sha256": "5159e1a44e279f041fe92a00d9a7d0e15b7937b0492eae35e014bb962613c4c9",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/af4385fe-a3a8-472c-a1af-1edefd1c84ec/google-reviews-logo.png?format=500w",
-      "file": "assets/decfc5743befeeaae40c.png",
+      "file": "assets/decfc5743befeeaae40c.webp",
       "bytes": 19580,
       "sha256": "decfc5743befeeaae40c242471f6ca1fea721ab0c1c7c51cfe734541ec232e29",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/af4385fe-a3a8-472c-a1af-1edefd1c84ec/google-reviews-logo.png?format=750w",
-      "file": "assets/e459a3440229c6e613eb.png",
+      "file": "assets/e459a3440229c6e613eb.webp",
       "bytes": 25754,
       "sha256": "e459a3440229c6e613eba41896c2997d071a2d0b8439f0b5145dbdd7389c2a50",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/af4385fe-a3a8-472c-a1af-1edefd1c84ec/google-reviews-logo.png?format=1000w",
-      "file": "assets/3e6a4b987cc01be12628.png",
+      "file": "assets/3e6a4b987cc01be12628.webp",
       "bytes": 32336,
       "sha256": "3e6a4b987cc01be12628e69168c426924eeb9aa723743b1adb10f90e92774d6a",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/af4385fe-a3a8-472c-a1af-1edefd1c84ec/google-reviews-logo.png?format=1500w",
-      "file": "assets/b0af6d80e91e6f25c2a8.png",
+      "file": "assets/b0af6d80e91e6f25c2a8.webp",
       "bytes": 23378,
       "sha256": "b0af6d80e91e6f25c2a81cf4d129f9922f0c764cec14bcc92a6fb3a1329d4428",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/af4385fe-a3a8-472c-a1af-1edefd1c84ec/google-reviews-logo.png?format=2500w",
-      "file": "assets/b0af6d80e91e6f25c2a8.png",
+      "file": "assets/b0af6d80e91e6f25c2a8.webp",
       "bytes": 23378,
       "sha256": "b0af6d80e91e6f25c2a81cf4d129f9922f0c764cec14bcc92a6fb3a1329d4428",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/d3a25d45-aacd-4413-80f4-aa7285c4646d/4.95.png",
-      "file": "assets/0115034ed66c784bf2d2.png",
+      "file": "assets/0115034ed66c784bf2d2.webp",
       "bytes": 12884,
       "sha256": "0115034ed66c784bf2d2a96bd91a19a12d727960f3502bbad7c939ef98ac936f",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/d3a25d45-aacd-4413-80f4-aa7285c4646d/4.95.png?format=100w",
-      "file": "assets/8587837ce28962c74896.png",
+      "file": "assets/8587837ce28962c74896.webp",
       "bytes": 4876,
       "sha256": "8587837ce28962c748962b7ef7fe2138a7ea71c78c0681c4fbb2973cee45ee01",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/d3a25d45-aacd-4413-80f4-aa7285c4646d/4.95.png?format=300w",
-      "file": "assets/14e96a187bb744a9acc3.png",
+      "file": "assets/14e96a187bb744a9acc3.webp",
       "bytes": 10504,
       "sha256": "14e96a187bb744a9acc3f0703cf3ae5bfbb9a188a90b9795d6de61b479052044",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/d3a25d45-aacd-4413-80f4-aa7285c4646d/4.95.png?format=500w",
-      "file": "assets/9c5f63dd9426ad8d0177.png",
+      "file": "assets/9c5f63dd9426ad8d0177.webp",
       "bytes": 16732,
       "sha256": "9c5f63dd9426ad8d017791056b50589f387df4a6e61641ddca073eb8ec9c22f6",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/d3a25d45-aacd-4413-80f4-aa7285c4646d/4.95.png?format=750w",
-      "file": "assets/aa1cb070e84e9a41e89e.png",
+      "file": "assets/aa1cb070e84e9a41e89e.webp",
       "bytes": 23612,
       "sha256": "aa1cb070e84e9a41e89e85bd5746c5a1da0799596d06ce28af42dd86ef6f2de7",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/d3a25d45-aacd-4413-80f4-aa7285c4646d/4.95.png?format=1000w",
-      "file": "assets/c6ba251f3d643a604e14.png",
+      "file": "assets/c6ba251f3d643a604e14.webp",
       "bytes": 31076,
       "sha256": "c6ba251f3d643a604e14cc411d8fe5c62c400859cb1c2c2c535b17772365e49a",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/d3a25d45-aacd-4413-80f4-aa7285c4646d/4.95.png?format=1500w",
-      "file": "assets/0115034ed66c784bf2d2.png",
+      "file": "assets/0115034ed66c784bf2d2.webp",
       "bytes": 12884,
       "sha256": "0115034ed66c784bf2d2a96bd91a19a12d727960f3502bbad7c939ef98ac936f",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/d3a25d45-aacd-4413-80f4-aa7285c4646d/4.95.png?format=2500w",
-      "file": "assets/0115034ed66c784bf2d2.png",
+      "file": "assets/0115034ed66c784bf2d2.webp",
       "bytes": 12884,
       "sha256": "0115034ed66c784bf2d2a96bd91a19a12d727960f3502bbad7c939ef98ac936f",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/2641e1e2-732e-423b-a0d5-1f2c1f9f44ce/Rescue+1+Movers+Logo+wht.png",
-      "file": "assets/f884b5ccafc7027bff1b.png",
+      "file": "assets/f884b5ccafc7027bff1b.webp",
       "bytes": 57638,
       "sha256": "f884b5ccafc7027bff1b874c355d7873d6c61a1cb7b48776ee9055555354cdf5",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/2641e1e2-732e-423b-a0d5-1f2c1f9f44ce/Rescue+1+Movers+Logo+wht.png?format=100w",
-      "file": "assets/3b2ccc2bb50c2d01bdd2.png",
+      "file": "assets/3b2ccc2bb50c2d01bdd2.webp",
       "bytes": 12246,
       "sha256": "3b2ccc2bb50c2d01bdd2f97a3f015c34ff883b80de07c8f181e752ebf349f5c5",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/2641e1e2-732e-423b-a0d5-1f2c1f9f44ce/Rescue+1+Movers+Logo+wht.png?format=300w",
-      "file": "assets/f65edd0cc6172a5873c3.png",
+      "file": "assets/f65edd0cc6172a5873c3.webp",
       "bytes": 43552,
       "sha256": "f65edd0cc6172a5873c31bff94a88617172772ac642f7a0eeb994738b0fd3633",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/2641e1e2-732e-423b-a0d5-1f2c1f9f44ce/Rescue+1+Movers+Logo+wht.png?format=500w",
-      "file": "assets/f884d1c86f74f46b1e3e.png",
+      "file": "assets/f884d1c86f74f46b1e3e.webp",
       "bytes": 73882,
       "sha256": "f884d1c86f74f46b1e3eec3c3f17fd600e48b2fc8943043dc6a640b41b88163c",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/2641e1e2-732e-423b-a0d5-1f2c1f9f44ce/Rescue+1+Movers+Logo+wht.png?format=750w",
-      "file": "assets/f699249f721323334164.png",
+      "file": "assets/f699249f721323334164.webp",
       "bytes": 114858,
       "sha256": "f699249f721323334164cb54cc8f62d694365f0fa77c06c46ed1c6a946d6e2a1",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/2641e1e2-732e-423b-a0d5-1f2c1f9f44ce/Rescue+1+Movers+Logo+wht.png?format=1000w",
-      "file": "assets/b0a09055c39a18db256c.png",
+      "file": "assets/b0a09055c39a18db256c.webp",
       "bytes": 151776,
       "sha256": "b0a09055c39a18db256cff0b02667569980d5bd4cf849420922fba86aa6d7a1a",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/2641e1e2-732e-423b-a0d5-1f2c1f9f44ce/Rescue+1+Movers+Logo+wht.png?format=1500w",
-      "file": "assets/21cfb91ee6b9a98b02f9.png",
+      "file": "assets/21cfb91ee6b9a98b02f9.webp",
       "bytes": 232352,
       "sha256": "21cfb91ee6b9a98b02f934ccbbe181d3456a973da95ff8b5411c8e2c885f08f5",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/2641e1e2-732e-423b-a0d5-1f2c1f9f44ce/Rescue+1+Movers+Logo+wht.png?format=2500w",
-      "file": "assets/f884b5ccafc7027bff1b.png",
+      "file": "assets/f884b5ccafc7027bff1b.webp",
       "bytes": 57638,
       "sha256": "f884b5ccafc7027bff1b874c355d7873d6c61a1cb7b48776ee9055555354cdf5",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/8d287adc-5939-464a-a901-54811cdb7dfb/IMG_2096.JPG",
-      "file": "assets/912b0c6b7cebeab5972b.jpg",
+      "file": "assets/912b0c6b7cebeab5972b.webp",
       "bytes": 264642,
       "sha256": "912b0c6b7cebeab5972becb0f5805523c3c2f87c4fe6fc7090262563ef499a25",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/8d287adc-5939-464a-a901-54811cdb7dfb/IMG_2096.JPG?format=100w",
-      "file": "assets/5f59b386d60e04d29d8e.jpg",
+      "file": "assets/5f59b386d60e04d29d8e.webp",
       "bytes": 4166,
       "sha256": "5f59b386d60e04d29d8ee474abd8578efe836c339bd6bbab037a86672c7011dc",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/8d287adc-5939-464a-a901-54811cdb7dfb/IMG_2096.JPG?format=300w",
-      "file": "assets/2aedc93af06dda1ae022.jpg",
+      "file": "assets/2aedc93af06dda1ae022.webp",
       "bytes": 26016,
       "sha256": "2aedc93af06dda1ae02203fe6dcab3158ea16288eae987e5d925eb510344c23a",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/8d287adc-5939-464a-a901-54811cdb7dfb/IMG_2096.JPG?format=500w",
-      "file": "assets/15775a30621b44627343.jpg",
+      "file": "assets/15775a30621b44627343.webp",
       "bytes": 68176,
       "sha256": "15775a30621b446273432fc4d0952f9e715e40a2894d75e7a8035c27d2075535",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/8d287adc-5939-464a-a901-54811cdb7dfb/IMG_2096.JPG?format=750w",
-      "file": "assets/b1418559cdd2b0551ea8.jpg",
+      "file": "assets/b1418559cdd2b0551ea8.webp",
       "bytes": 144164,
       "sha256": "b1418559cdd2b0551ea8f250e1a99a04b8d4fb83bcbe443c2d2b8db6d9ab3bd8",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/8d287adc-5939-464a-a901-54811cdb7dfb/IMG_2096.JPG?format=1000w",
-      "file": "assets/28514604affc50347b57.jpg",
+      "file": "assets/28514604affc50347b57.webp",
       "bytes": 220208,
       "sha256": "28514604affc50347b57b21ca121dacc72f505483cba1044a0f5b6b089bd4de9",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/8d287adc-5939-464a-a901-54811cdb7dfb/IMG_2096.JPG?format=1500w",
-      "file": "assets/912b0c6b7cebeab5972b.jpg",
+      "file": "assets/912b0c6b7cebeab5972b.webp",
       "bytes": 264642,
       "sha256": "912b0c6b7cebeab5972becb0f5805523c3c2f87c4fe6fc7090262563ef499a25",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/8d287adc-5939-464a-a901-54811cdb7dfb/IMG_2096.JPG?format=2500w",
-      "file": "assets/912b0c6b7cebeab5972b.jpg",
+      "file": "assets/912b0c6b7cebeab5972b.webp",
       "bytes": 264642,
       "sha256": "912b0c6b7cebeab5972becb0f5805523c3c2f87c4fe6fc7090262563ef499a25",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/6abb699a-8115-4fd9-b782-f5686e887c79/IMG_2097.JPG",
-      "file": "assets/55dee197524ef05c3742.jpg",
+      "file": "assets/55dee197524ef05c3742.webp",
       "bytes": 302328,
       "sha256": "55dee197524ef05c3742478f5ad8e2fe8c1d0c85f8f91f65723cc06bab0ab663",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/6abb699a-8115-4fd9-b782-f5686e887c79/IMG_2097.JPG?format=100w",
-      "file": "assets/2dfafe7f33f1a906076a.jpg",
+      "file": "assets/2dfafe7f33f1a906076a.webp",
       "bytes": 5136,
       "sha256": "2dfafe7f33f1a906076a9854850aa27c07376440020bd6e82dffeb876501010b",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/6abb699a-8115-4fd9-b782-f5686e887c79/IMG_2097.JPG?format=300w",
-      "file": "assets/9928af485610a4738c4f.jpg",
+      "file": "assets/9928af485610a4738c4f.webp",
       "bytes": 30318,
       "sha256": "9928af485610a4738c4f575ddca026f9483061158a161f289a5e5eec17391826",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/6abb699a-8115-4fd9-b782-f5686e887c79/IMG_2097.JPG?format=500w",
-      "file": "assets/42888d0647b459b3c98a.jpg",
+      "file": "assets/42888d0647b459b3c98a.webp",
       "bytes": 66726,
       "sha256": "42888d0647b459b3c98a2e514a7a328b30acda8303c3b8a92ff7fecb5df40665",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/6abb699a-8115-4fd9-b782-f5686e887c79/IMG_2097.JPG?format=750w",
-      "file": "assets/cd1b993318e2f6a2d421.jpg",
+      "file": "assets/cd1b993318e2f6a2d421.webp",
       "bytes": 114806,
       "sha256": "cd1b993318e2f6a2d42127285437dedb2d7cb7b0a954739e48738a8f7073e4b5",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/6abb699a-8115-4fd9-b782-f5686e887c79/IMG_2097.JPG?format=1000w",
-      "file": "assets/a043ef5914907dfd43aa.jpg",
+      "file": "assets/a043ef5914907dfd43aa.webp",
       "bytes": 165840,
       "sha256": "a043ef5914907dfd43aa300b44b702b5ab4d4ee03dd20d43c3bf7345423f471c",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/6abb699a-8115-4fd9-b782-f5686e887c79/IMG_2097.JPG?format=1500w",
-      "file": "assets/296e60ba6d293f5f341e.jpg",
+      "file": "assets/296e60ba6d293f5f341e.webp",
       "bytes": 274322,
       "sha256": "296e60ba6d293f5f341e2343fbd28cd9ddb7e56085827fc3a0b17adca4f46cb8",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/6abb699a-8115-4fd9-b782-f5686e887c79/IMG_2097.JPG?format=2500w",
-      "file": "assets/55dee197524ef05c3742.jpg",
+      "file": "assets/55dee197524ef05c3742.webp",
       "bytes": 302328,
       "sha256": "55dee197524ef05c3742478f5ad8e2fe8c1d0c85f8f91f65723cc06bab0ab663",
       "content_type": "image/webp"
@@ -860,253 +1021,225 @@
       "content_type": "application/javascript; charset=UTF-8"
     },
     {
-      "url": "https://assets.squarespace.com/universal/scripts-compressed/extract-css-runtime-b1e8cfe0d013fba5-min.en-US.js",
-      "file": "assets/455891c20ceb0169f584.js",
-      "bytes": 51540,
-      "sha256": "455891c20ceb0169f584fe8646230477125c2397dca792750ddede29399af54a",
-      "content_type": "text/javascript"
-    },
-    {
-      "url": "https://assets.squarespace.com/universal/scripts-compressed/common-7d289a9a1e9549aa-min.en-US.js",
-      "file": "assets/495f2aebf8f9948b5c6d.js",
-      "bytes": 989479,
-      "sha256": "495f2aebf8f9948b5c6d1e14b9e813194243dfaf89bbea2344fbcd648558460f",
-      "content_type": "text/javascript"
-    },
-    {
-      "url": "https://assets.squarespace.com/universal/scripts-compressed/user-account-core-ca99048170e8f83d-min.en-US.js",
-      "file": "assets/1c804ea72fc899a86e0d.js",
-      "bytes": 80706,
-      "sha256": "1c804ea72fc899a86e0dbdcea6bb942d56dd7b34271aaa759418363fcdf5f5d1",
-      "content_type": "text/javascript"
-    },
-    {
-      "url": "https://assets.squarespace.com/universal/scripts-compressed/performance-d93749be3aac86ef-min.en-US.js",
-      "file": "assets/eb3849faea0cf9509b50.js",
-      "bytes": 123368,
-      "sha256": "eb3849faea0cf9509b50877e27237ba78ae76697acdb380f62ad165e97bd3235",
-      "content_type": "text/javascript"
-    },
-    {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/91d7fb54-dff5-4af4-97ee-a745ecb92a98/house.png",
-      "file": "assets/a3fb75fcfb9f43e0788a.png",
+      "file": "assets/a3fb75fcfb9f43e0788a.webp",
       "bytes": 8670,
       "sha256": "a3fb75fcfb9f43e0788a38e8fe6e38cc101729623bcfeba27c9575a790350b90",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/91d7fb54-dff5-4af4-97ee-a745ecb92a98/house.png?format=100w",
-      "file": "assets/f95eaf973ee1702545c7.png",
+      "file": "assets/f95eaf973ee1702545c7.webp",
       "bytes": 4228,
       "sha256": "f95eaf973ee1702545c7a848da876800627f61cfe134b0b2530288ae7f7c5cc4",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/91d7fb54-dff5-4af4-97ee-a745ecb92a98/house.png?format=300w",
-      "file": "assets/5e33e61012bc43246d43.png",
+      "file": "assets/5e33e61012bc43246d43.webp",
       "bytes": 8554,
       "sha256": "5e33e61012bc43246d43583798876fa2aa1a3e0ea3310fdaff4b3b8f6ea5ae83",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/91d7fb54-dff5-4af4-97ee-a745ecb92a98/house.png?format=500w",
-      "file": "assets/e1a006b9fca1d97e22bc.png",
+      "file": "assets/e1a006b9fca1d97e22bc.webp",
       "bytes": 16316,
       "sha256": "e1a006b9fca1d97e22bc604241b09a2782c1c361ff9d91bd30a5ad66ce1c3ebb",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/91d7fb54-dff5-4af4-97ee-a745ecb92a98/house.png?format=750w",
-      "file": "assets/cf7aab1ed2566e3914fd.png",
+      "file": "assets/cf7aab1ed2566e3914fd.webp",
       "bytes": 23222,
       "sha256": "cf7aab1ed2566e3914fd081f74c990ce6d8d55021426a044cf187c9b35fa0a26",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/91d7fb54-dff5-4af4-97ee-a745ecb92a98/house.png?format=1000w",
-      "file": "assets/4296c6d55a89201d2623.png",
+      "file": "assets/4296c6d55a89201d2623.webp",
       "bytes": 32078,
       "sha256": "4296c6d55a89201d2623d5eb6b8e7cbcd08fe1e2e2e0f11281412e5b98433874",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/91d7fb54-dff5-4af4-97ee-a745ecb92a98/house.png?format=1500w",
-      "file": "assets/a3fb75fcfb9f43e0788a.png",
+      "file": "assets/a3fb75fcfb9f43e0788a.webp",
       "bytes": 8670,
       "sha256": "a3fb75fcfb9f43e0788a38e8fe6e38cc101729623bcfeba27c9575a790350b90",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/91d7fb54-dff5-4af4-97ee-a745ecb92a98/house.png?format=2500w",
-      "file": "assets/a3fb75fcfb9f43e0788a.png",
+      "file": "assets/a3fb75fcfb9f43e0788a.webp",
       "bytes": 8670,
       "sha256": "a3fb75fcfb9f43e0788a38e8fe6e38cc101729623bcfeba27c9575a790350b90",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/148a65de-765b-4c9f-9c1d-79d258cd4e6a/office.png",
-      "file": "assets/fb53fea8eb22b8803547.png",
+      "file": "assets/fb53fea8eb22b8803547.webp",
       "bytes": 2438,
       "sha256": "fb53fea8eb22b8803547b9cb9b4a33c458f71c77e0c55b59ce0c385d64ea9de9",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/148a65de-765b-4c9f-9c1d-79d258cd4e6a/office.png?format=100w",
-      "file": "assets/f8800d5d8d60a5dc6084.png",
+      "file": "assets/f8800d5d8d60a5dc6084.webp",
       "bytes": 3008,
       "sha256": "f8800d5d8d60a5dc6084d36063df66b5e9affc92a7b82b0b6ebf936e22cd117c",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/148a65de-765b-4c9f-9c1d-79d258cd4e6a/office.png?format=300w",
-      "file": "assets/ca855d2c6e92251b2211.png",
+      "file": "assets/ca855d2c6e92251b2211.webp",
       "bytes": 3212,
       "sha256": "ca855d2c6e92251b221100472029ec02e57876186014e9712ce7d4c17abbfca7",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/148a65de-765b-4c9f-9c1d-79d258cd4e6a/office.png?format=500w",
-      "file": "assets/4f3530d300e9a59168a0.png",
+      "file": "assets/4f3530d300e9a59168a0.webp",
       "bytes": 3494,
       "sha256": "4f3530d300e9a59168a0db123d9bda52c5b3a338aebc4992a241032593991aed",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/148a65de-765b-4c9f-9c1d-79d258cd4e6a/office.png?format=750w",
-      "file": "assets/0c3e1946cd4c5975530f.png",
+      "file": "assets/0c3e1946cd4c5975530f.webp",
       "bytes": 3956,
       "sha256": "0c3e1946cd4c5975530f23473696e9cb3e7898af0f3fe6dec45eb72ac2c3f214",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/148a65de-765b-4c9f-9c1d-79d258cd4e6a/office.png?format=1000w",
-      "file": "assets/2d68a481223543d7a8e9.png",
+      "file": "assets/2d68a481223543d7a8e9.webp",
       "bytes": 4320,
       "sha256": "2d68a481223543d7a8e95f6268578284ead134200cd798667516e39a5d8518c2",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/148a65de-765b-4c9f-9c1d-79d258cd4e6a/office.png?format=1500w",
-      "file": "assets/fb53fea8eb22b8803547.png",
+      "file": "assets/fb53fea8eb22b8803547.webp",
       "bytes": 2438,
       "sha256": "fb53fea8eb22b8803547b9cb9b4a33c458f71c77e0c55b59ce0c385d64ea9de9",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/148a65de-765b-4c9f-9c1d-79d258cd4e6a/office.png?format=2500w",
-      "file": "assets/fb53fea8eb22b8803547.png",
+      "file": "assets/fb53fea8eb22b8803547.webp",
       "bytes": 2438,
       "sha256": "fb53fea8eb22b8803547b9cb9b4a33c458f71c77e0c55b59ce0c385d64ea9de9",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/55977fdb-ce80-4da7-9d7b-daa9cd926d2f/boxtruck.png",
-      "file": "assets/0d283918e36f0f4ae727.png",
+      "file": "assets/0d283918e36f0f4ae727.webp",
       "bytes": 10764,
       "sha256": "0d283918e36f0f4ae72777bd855b9e9a292ef4fafbeafcdc1fd7433fa030271e",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/55977fdb-ce80-4da7-9d7b-daa9cd926d2f/boxtruck.png?format=100w",
-      "file": "assets/b99c72fcc786bf39c345.png",
+      "file": "assets/b99c72fcc786bf39c345.webp",
       "bytes": 3832,
       "sha256": "b99c72fcc786bf39c345ed0354249814c190d9b4f5460c36bf0b67d793058ca9",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/55977fdb-ce80-4da7-9d7b-daa9cd926d2f/boxtruck.png?format=300w",
-      "file": "assets/0510ed84000637c508e2.png",
+      "file": "assets/0510ed84000637c508e2.webp",
       "bytes": 7484,
       "sha256": "0510ed84000637c508e20466dab8218d25cf02e61d7bae266fa5c68124c4ff29",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/55977fdb-ce80-4da7-9d7b-daa9cd926d2f/boxtruck.png?format=500w",
-      "file": "assets/3ed5d0a6e416791d06f5.png",
+      "file": "assets/3ed5d0a6e416791d06f5.webp",
       "bytes": 11742,
       "sha256": "3ed5d0a6e416791d06f50ccf6585aba0cf907a6a9866016c468df8736ee69926",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/55977fdb-ce80-4da7-9d7b-daa9cd926d2f/boxtruck.png?format=750w",
-      "file": "assets/697bb3effd552b07e16c.png",
+      "file": "assets/697bb3effd552b07e16c.webp",
       "bytes": 17008,
       "sha256": "697bb3effd552b07e16c03e411c6e0ce655376655eb8552a021df514954f197e",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/55977fdb-ce80-4da7-9d7b-daa9cd926d2f/boxtruck.png?format=1000w",
-      "file": "assets/5e7d355f126b38051e50.png",
+      "file": "assets/5e7d355f126b38051e50.webp",
       "bytes": 22712,
       "sha256": "5e7d355f126b38051e5081d2cf56492e1f68e7fa7a1cb367a8f4fda85b9c3367",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/55977fdb-ce80-4da7-9d7b-daa9cd926d2f/boxtruck.png?format=1500w",
-      "file": "assets/0d283918e36f0f4ae727.png",
+      "file": "assets/0d283918e36f0f4ae727.webp",
       "bytes": 10764,
       "sha256": "0d283918e36f0f4ae72777bd855b9e9a292ef4fafbeafcdc1fd7433fa030271e",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/55977fdb-ce80-4da7-9d7b-daa9cd926d2f/boxtruck.png?format=2500w",
-      "file": "assets/0d283918e36f0f4ae727.png",
+      "file": "assets/0d283918e36f0f4ae727.webp",
       "bytes": 10764,
       "sha256": "0d283918e36f0f4ae72777bd855b9e9a292ef4fafbeafcdc1fd7433fa030271e",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/dde587af-9073-4b12-9e74-8c5c03e05133/IMG_2094.JPG",
-      "file": "assets/b1cfe2e254d2695de22b.jpg",
+      "file": "assets/b1cfe2e254d2695de22b.webp",
       "bytes": 143012,
       "sha256": "b1cfe2e254d2695de22b6e469365874c868be64f9ff4b2eb08f2e7dd806b87d2",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/dde587af-9073-4b12-9e74-8c5c03e05133/IMG_2094.JPG?format=100w",
-      "file": "assets/a2fc38c10f7079781eed.jpg",
+      "file": "assets/a2fc38c10f7079781eed.webp",
       "bytes": 4456,
       "sha256": "a2fc38c10f7079781eed92a33312cfd5844f72c9cb9426eee8a163c904e2e583",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/dde587af-9073-4b12-9e74-8c5c03e05133/IMG_2094.JPG?format=300w",
-      "file": "assets/73e6cdfdb87043603550.jpg",
+      "file": "assets/73e6cdfdb87043603550.webp",
       "bytes": 24524,
       "sha256": "73e6cdfdb87043603550c7f6aa75c83f84d15f16f6a50add6f5e75ec2ce5f30d",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/dde587af-9073-4b12-9e74-8c5c03e05133/IMG_2094.JPG?format=500w",
-      "file": "assets/7ca5cfb48ed917b27b46.jpg",
+      "file": "assets/7ca5cfb48ed917b27b46.webp",
       "bytes": 51006,
       "sha256": "7ca5cfb48ed917b27b469678b6b63cd828b1b69d12e0881ab4c8ea6138352499",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/dde587af-9073-4b12-9e74-8c5c03e05133/IMG_2094.JPG?format=750w",
-      "file": "assets/e78a7f61768f309b7a85.jpg",
+      "file": "assets/e78a7f61768f309b7a85.webp",
       "bytes": 89550,
       "sha256": "e78a7f61768f309b7a8597cb83f75c4422cbb9f07354174ee08b36f107813d07",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/dde587af-9073-4b12-9e74-8c5c03e05133/IMG_2094.JPG?format=1000w",
-      "file": "assets/558d186eb35116e86b10.jpg",
+      "file": "assets/558d186eb35116e86b10.webp",
       "bytes": 128972,
       "sha256": "558d186eb35116e86b1059d2c0d393b0f6f78b872518fe23db9a8df8c3dc7e64",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/dde587af-9073-4b12-9e74-8c5c03e05133/IMG_2094.JPG?format=1500w",
-      "file": "assets/b1cfe2e254d2695de22b.jpg",
+      "file": "assets/b1cfe2e254d2695de22b.webp",
       "bytes": 143012,
       "sha256": "b1cfe2e254d2695de22b6e469365874c868be64f9ff4b2eb08f2e7dd806b87d2",
       "content_type": "image/webp"
     },
     {
       "url": "https://images.squarespace-cdn.com/content/v1/6a0b9b967b69be254327c65b/dde587af-9073-4b12-9e74-8c5c03e05133/IMG_2094.JPG?format=2500w",
-      "file": "assets/b1cfe2e254d2695de22b.jpg",
+      "file": "assets/b1cfe2e254d2695de22b.webp",
       "bytes": 143012,
       "sha256": "b1cfe2e254d2695de22b6e469365874c868be64f9ff4b2eb08f2e7dd806b87d2",
       "content_type": "image/webp"
@@ -1327,59 +1460,34 @@
       "bytes": 32752,
       "sha256": "4c2536979555e40b739d742d722d84ac0f2fc5c0911ab833773008b781411d54",
       "content_type": "text/plain"
+    },
+    {
+      "url": "https://assets.squarespace.com/universal/fonts/social-20141119/social-icon-font.ttf",
+      "file": "assets/56a10f4f8fe8926e56e2.ttf",
+      "bytes": 32676,
+      "sha256": "56a10f4f8fe8926e56e29b2cdf280beb74871808297b863fffcc17b5ba0f50ce",
+      "content_type": "text/plain"
+    },
+    {
+      "url": "https://assets.squarespace.com/universal/fonts/social-20141119/social-icon-font.svg",
+      "file": "assets/6be491a05f067cbb264e.svg",
+      "bytes": 64791,
+      "sha256": "6be491a05f067cbb264e947021ed06461a15d998b6a2a8b6710eaeff6fe14a7a",
+      "content_type": "image/svg+xml"
     }
   ],
   "external_references_not_downloaded": [
-    "https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.button/55d6dc9d-d365-48cc-9ce7-5c232a398147_1163/website.components.button.styles.css",
-    "https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.button/55d6dc9d-d365-48cc-9ce7-5c232a398147_1163/website.components.button.visitor.js",
-    "https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.button/5c251eae-5d12-4683-8c74-5bac1112ae77_1164/website.components.button.styles.css",
-    "https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.button/5c251eae-5d12-4683-8c74-5bac1112ae77_1164/website.components.button.visitor.js",
-    "https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.embed/0900b03b-d66e-481d-84dc-498475291edd_738/website.components.embed.styles.css",
-    "https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.embed/0900b03b-d66e-481d-84dc-498475291edd_738/website.components.embed.visitor.js",
-    "https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.embed/2025959f-c7f4-4511-98b2-307250f232e1_739/website.components.embed.styles.css",
-    "https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.embed/2025959f-c7f4-4511-98b2-307250f232e1_739/website.components.embed.visitor.js",
-    "https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.html/09e3d24c-5e70-4672-9707-dc0028faf701_994/website.components.html.styles.css",
-    "https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.html/09e3d24c-5e70-4672-9707-dc0028faf701_994/website.components.html.visitor.js",
-    "https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.html/90b16ead-278f-4dad-9d88-dae28b434acb_993/website.components.html.styles.css",
-    "https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.html/90b16ead-278f-4dad-9d88-dae28b434acb_993/website.components.html.visitor.js",
-    "https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.imageFluid/45d5f410-54c1-4b0e-9da7-ae189c5cf6ab_981/18018.js",
-    "https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.imageFluid/45d5f410-54c1-4b0e-9da7-ae189c5cf6ab_981/39188.js",
-    "https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.imageFluid/45d5f410-54c1-4b0e-9da7-ae189c5cf6ab_981/39882.js",
-    "https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.imageFluid/45d5f410-54c1-4b0e-9da7-ae189c5cf6ab_981/64023.js",
-    "https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.imageFluid/45d5f410-54c1-4b0e-9da7-ae189c5cf6ab_981/92452.js",
-    "https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.imageFluid/45d5f410-54c1-4b0e-9da7-ae189c5cf6ab_981/image-effect-film-grain.js",
-    "https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.imageFluid/45d5f410-54c1-4b0e-9da7-ae189c5cf6ab_981/image-effect-liquid.js",
-    "https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.imageFluid/45d5f410-54c1-4b0e-9da7-ae189c5cf6ab_981/image-effect-parallax.js",
-    "https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.imageFluid/45d5f410-54c1-4b0e-9da7-ae189c5cf6ab_981/image-effect-refracted-circles.js",
-    "https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.imageFluid/45d5f410-54c1-4b0e-9da7-ae189c5cf6ab_981/image-effect-refracted-lines.js",
-    "https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.imageFluid/45d5f410-54c1-4b0e-9da7-ae189c5cf6ab_981/website.components.imageFluid.shared.constants.js",
-    "https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.imageFluid/45d5f410-54c1-4b0e-9da7-ae189c5cf6ab_981/website.components.imageFluid.styles.css",
-    "https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.imageFluid/45d5f410-54c1-4b0e-9da7-ae189c5cf6ab_981/website.components.imageFluid.visitor.js",
-    "https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.imageFluid/a33c1585-1582-4b1b-8b1b-79c89454107a_980/18018.js",
-    "https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.imageFluid/a33c1585-1582-4b1b-8b1b-79c89454107a_980/39188.js",
-    "https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.imageFluid/a33c1585-1582-4b1b-8b1b-79c89454107a_980/39882.js",
-    "https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.imageFluid/a33c1585-1582-4b1b-8b1b-79c89454107a_980/64023.js",
-    "https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.imageFluid/a33c1585-1582-4b1b-8b1b-79c89454107a_980/92452.js",
-    "https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.imageFluid/a33c1585-1582-4b1b-8b1b-79c89454107a_980/image-effect-film-grain.js",
-    "https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.imageFluid/a33c1585-1582-4b1b-8b1b-79c89454107a_980/image-effect-liquid.js",
-    "https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.imageFluid/a33c1585-1582-4b1b-8b1b-79c89454107a_980/image-effect-parallax.js",
-    "https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.imageFluid/a33c1585-1582-4b1b-8b1b-79c89454107a_980/image-effect-refracted-circles.js",
-    "https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.imageFluid/a33c1585-1582-4b1b-8b1b-79c89454107a_980/image-effect-refracted-lines.js",
-    "https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.imageFluid/a33c1585-1582-4b1b-8b1b-79c89454107a_980/website.components.imageFluid.shared.constants.js",
-    "https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.imageFluid/a33c1585-1582-4b1b-8b1b-79c89454107a_980/website.components.imageFluid.styles.css",
-    "https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.imageFluid/a33c1585-1582-4b1b-8b1b-79c89454107a_980/website.components.imageFluid.visitor.js",
-    "https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.shape/2cbd514f-f4bd-4ac7-9c3c-c6ac2a155514_1388/website.components.shape.styles.css",
-    "https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.shape/2cbd514f-f4bd-4ac7-9c3c-c6ac2a155514_1388/website.components.shape.visitor.js",
-    "https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.socialLinks/56a08295-15b8-4140-89c5-58222ba87b43_771/website.components.socialLinks.styles.css",
-    "https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.socialLinks/56a08295-15b8-4140-89c5-58222ba87b43_771/website.components.socialLinks.visitor.js",
-    "https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.socialLinks/d1a28e08-6d99-46a7-b4e0-e61aac178ecf_772/website.components.socialLinks.styles.css",
-    "https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.socialLinks/d1a28e08-6d99-46a7-b4e0-e61aac178ecf_772/website.components.socialLinks.visitor.js",
     "https://portal.smartmoving.com/embedded/?companyId=fdb2a393-d42d-414e-9045-b456011ed124&branchId=c8c3d508-60bc-44ca-828b-b456011ed219&mode=full"
   ],
-  "errors": [],
+  "errors": [
+    {
+      "url": "https://static1.squarespace.com/static/vta/5c5a519771c10ba3470d8101/versioned-assets/1792079378326-3P84T29X62IH7QZWGRSR/%23check",
+      "error": "404 Client Error: Not Found for url: https://static1.squarespace.com/static/vta/5c5a519771c10ba3470d8101/versioned-assets/1792079378326-3P84T29X62IH7QZWGRSR/%23check"
+    }
+  ],
   "limits": {
     "max_pages": 20,
-    "max_assets": 180,
+    "max_assets": 450,
     "max_single_asset_bytes": 14680064,
     "max_total_asset_bytes": 115343360
   }
