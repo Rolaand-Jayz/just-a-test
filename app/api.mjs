@@ -28,7 +28,7 @@ function listRows(db,user,resource,params) {
   const spec=F[resource];
   guard(db,user,resource);
   let where='',values=[];
-  if(resource==='jobs'&&!can(db,user,'jobs','edit')) {
+  if(resource==='jobs'&&user.role==='crew') {
     // Crew visibility is limited to jobs they are actually assigned.
     where=' WHERE id IN (SELECT job_id FROM assignments WHERE staff_id=?)';values.push(user.id);
   }
@@ -139,7 +139,7 @@ function handleRecord(db,user,resource,recordId,method,body) {
   return db.prepare('SELECT * FROM '+spec.table+' WHERE id=?').get(recordId);
 }
 function canSee(db,user,resource,row){
-  if(resource==='jobs'&&!can(db,user,'jobs','edit'))
+  if(resource==='jobs'&&user.role==='crew')
     return !!db.prepare('SELECT 1 AS ok FROM assignments WHERE job_id=? AND staff_id=?').get(row.id,user.id);
   if(resource==='time'&&!can(db,user,'time','approve')&&!can(db,user,'payroll','view'))return isSelf(user,row);
   if(resource==='leave'&&!can(db,user,'leave','approve'))return isSelf(user,row);
