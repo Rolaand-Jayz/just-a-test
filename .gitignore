@@ -1,0 +1,14 @@
+# Never commit operational data or credentials.
+var/
+backups/
+data/
+.env
+.env.*
+!.env.example
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+*.db
+node_modules/
+dist/
+*.log
