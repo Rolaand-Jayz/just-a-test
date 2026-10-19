@@ -108,7 +108,7 @@ function handleRecord(db,user,resource,recordId,method,body) {
   if(resource==='time') {
     if(!can(db,user,'time','approve')) {
       if(!isSelf(user,row)||row.status!=='pending')throw error(403,'Cannot change this time entry');
-      delete fields.status;
+      if(Object.hasOwn(fields,'status'))throw error(403,'Time approval requires manager permission');
       delete fields.started_at;delete fields.job_id;
     }
     if(fields.ended_at) {
