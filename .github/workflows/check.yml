@@ -30,12 +30,14 @@ jobs:
           node --check script.js
       - name: Run full automated tests
         run: npm test
+      - name: Validate production container build
+        run: docker build --pull -t rescue1-site:test .
       - name: Package independent deployable application
         shell: bash
         run: |
           set -euo pipefail
           mkdir -p dist/rescue1-movers
-          cp -a app services tests index.html 404.html styles.css script.js favicon.svg \
+          cp -a app services tests scripts Dockerfile compose.yaml .dockerignore index.html 404.html styles.css script.js favicon.svg \
             robots.txt sitemap.xml moving-guide.html package.json README.md \
             dist/rescue1-movers/
           cp -a DEPLOYMENT.md dist/rescue1-movers/
