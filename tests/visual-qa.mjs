@@ -37,7 +37,7 @@ const issues=[],captured=[];
 const chrome=process.env.CHROME_BIN||'/usr/bin/google-chrome';
 
 function issue(category,page,message) {
- issues.push({category,page,message:String(message)});
+ issues.push({category,page,message:typeof message==='string'?message:JSON.stringify(message)});
 }
 async function snap(browser,{name,path='/',width=1440,height=900,action}){
  const context=await browser.newContext({
