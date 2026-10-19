@@ -97,7 +97,7 @@
   $('#top-avatar').textContent=(user.name||'R').charAt(0).toUpperCase();
   renderNav();navigate('overview');
   clearInterval(refreshTimer);
-  refreshTimer=setInterval(()=>{if(module==='chat')renderModule('chat',true).catch(()=>{});},15000);
+  refreshTimer=setInterval(()=>{if(module==='chat'&&!$('#chat-input:focus'))renderModule('chat',true).catch(()=>{});},15000);
  }
  function renderNav(){
   const active=module;
