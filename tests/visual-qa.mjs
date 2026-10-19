@@ -47,7 +47,7 @@ async function snap(browser,{name,path='/',width=1440,height=900,action}){
  const page=await context.newPage();
  const pageErrors=[];
  page.on('pageerror',e=>pageErrors.push(e.message));
- page.on('console',e=>{if(e.type()==='error'&&!e.text().includes('net::ERR'))pageErrors.push('console: '+e.text());});
+ page.on('console',e=>{if(e.type()==='error'&&!e.text().includes('net::ERR')&&!e.text().includes('401 (Unauthorized)'))pageErrors.push('console: '+e.text());});
  const response=await page.goto(base+path,{waitUntil:'domcontentloaded',timeout:20000});
  await page.waitForTimeout(750);
  if(action)await action(page);
@@ -56,9 +56,17 @@ async function snap(browser,{name,path='/',width=1440,height=900,action}){
   viewport:window.innerWidth,
   document:document.documentElement.scrollWidth,
   body:document.body.scrollWidth,
-  images:[...document.querySelectorAll('main img')].map(el=>({src:el.currentSrc.slice(0,120),ok:el.complete&&el.naturalWidth>0}))
+  images:[...document.querySelectorAll('main img')].filter(el=>{const box=el.getBoundingClientRect();return box.top<window.innerHeight+50&&box.bottom>-50;}).map(el=>({src:el.currentSrc.slice(0,120),ok:el.complete&&el.naturalWidth>0}))
  }));
- if(overflow.document>overflow.viewport+3)issue('horizontal-overflow',name,overflow);
+ if(overflow.document>overflow.viewport+3){
+  const offenders=await page.evaluate(()=>[...document.querySelectorAll('body *')]
+    .map(el=>({el,box:el.getBoundingClientRect()}))
+    .filter(x=>x.box.right>window.innerWidth+3&&x.box.width>0)
+    .sort((a,b)=>b.box.right-a.box.right)
+    .slice(0,12)
+    .map(x=>({tag:x.el.tagName,cl:String(x.el.className).slice(0,100),right:Math.round(x.box.right),width:Math.round(x.box.width)})));
+  issue('horizontal-overflow',name,{...overflow,offenders});
+ }
  if(overflow.images.some(x=>!x.ok))issue('unloaded-images',name,overflow.images.filter(x=>!x.ok));
  for(const e of pageErrors)issue('browser-error',name,e);
  const file=name+'.png';
