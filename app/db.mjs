@@ -4,24 +4,25 @@ import { mkdirSync } from 'node:fs';
 import { dirname } from 'node:path';
 
 export const ROLES = ['owner','admin','operations','dispatcher','sales','finance','hr','crew'];
-export const RESOURCES = ['overview','leads','customers','jobs','dispatch','time','leave','expenses','invoices','reports','staff','permissions','audit'];
+export const RESOURCES = ['overview','leads','quotes','customers','jobs','dispatch','time','leave','expenses','invoices','payroll','announcements','chat','reports','staff','permissions','audit'];
 export const ACTIONS = ['view','create','edit','delete','assign','approve','export','manage'];
 const DEFAULT = {
  owner:['*:*'],
- admin:['overview:view','leads:*','customers:*','jobs:*','dispatch:*','time:*','leave:*','expenses:*','invoices:*','reports:*','staff:view','staff:create','staff:edit','audit:view'],
- operations:['overview:view','leads:view','leads:edit','customers:view','jobs:*','dispatch:*','time:view','time:approve','leave:view','reports:view'],
- dispatcher:['overview:view','leads:view','customers:view','jobs:view','jobs:edit','jobs:assign','dispatch:view','dispatch:edit','dispatch:assign','time:view'],
- sales:['overview:view','leads:*','customers:*','jobs:view','reports:view'],
- finance:['overview:view','leads:view','customers:view','jobs:view','time:view','expenses:*','invoices:*','reports:view','reports:export'],
- hr:['overview:view','jobs:view','time:*','leave:*','staff:view','staff:create','staff:edit','reports:view'],
- crew:['overview:view','jobs:view','time:view','time:create','time:edit','leave:view','leave:create']
+ admin:['announcements:*','chat:*','payroll:view','overview:view','quotes:*','leads:*','customers:*','jobs:*','dispatch:*','time:*','leave:*','expenses:*','invoices:*','reports:*','staff:view','staff:create','staff:edit','audit:view'],
+ operations:['announcements:*','chat:*','quotes:view','quotes:edit','overview:view','leads:view','leads:edit','customers:view','jobs:*','dispatch:*','time:view','time:approve','leave:view','reports:view'],
+ dispatcher:['announcements:view','chat:*','quotes:view','overview:view','leads:view','customers:view','jobs:view','jobs:edit','jobs:assign','dispatch:view','dispatch:edit','dispatch:assign','time:view'],
+ sales:['announcements:view','chat:*','quotes:*','overview:view','leads:*','customers:*','jobs:view','reports:view'],
+ finance:['announcements:view','chat:*','quotes:view','quotes:edit','payroll:*','overview:view','leads:view','customers:view','jobs:view','time:view','expenses:*','invoices:*','reports:view','reports:export'],
+ hr:['announcements:*','chat:*','payroll:*','overview:view','jobs:view','time:*','leave:*','staff:view','staff:create','staff:edit','reports:view'],
+ crew:['announcements:view','chat:view','chat:create','overview:view','jobs:view','time:view','time:create','time:edit','leave:view','leave:create']
 };
 export const STATUSES = {
  leads:['new','contacted','quoted','won','lost'],
  jobs:['scheduled','in_progress','completed','cancelled'],
  leave:['pending','approved','denied'],
  expenses:['pending','approved','rejected'],
- invoices:['draft','sent','paid','void']
+ invoices:['draft','sent','paid','void'],
+ quotes:['draft','sent','accepted','declined']
 };
 
 export function openDatabase(file) {
@@ -103,6 +104,25 @@ export function openDatabase(file) {
     amount_cents INTEGER NOT NULL CHECK(amount_cents>0), method TEXT NOT NULL,
     reference TEXT NOT NULL DEFAULT '', received_on TEXT NOT NULL,
     recorded_by TEXT NOT NULL REFERENCES staff(id), created_at TEXT NOT NULL
+  );
+  CREATE TABLE IF NOT EXISTS quotes (
+    id TEXT PRIMARY KEY, lead_id TEXT REFERENCES leads(id), customer_name TEXT NOT NULL,
+    amount_cents INTEGER NOT NULL CHECK(amount_cents >= 0), description TEXT NOT NULL DEFAULT '',
+    valid_until TEXT NOT NULL DEFAULT '', status TEXT NOT NULL DEFAULT 'draft',
+    created_at TEXT NOT NULL
+  );
+  CREATE TABLE IF NOT EXISTS announcements (
+    id TEXT PRIMARY KEY, title TEXT NOT NULL, body TEXT NOT NULL,
+    priority TEXT NOT NULL DEFAULT 'normal', author_id TEXT NOT NULL REFERENCES staff(id),
+    created_at TEXT NOT NULL
+  );
+  CREATE TABLE IF NOT EXISTS chat_messages (
+    id TEXT PRIMARY KEY, author_id TEXT NOT NULL REFERENCES staff(id),
+    channel TEXT NOT NULL DEFAULT 'general', message TEXT NOT NULL, created_at TEXT NOT NULL
+  );
+  CREATE TABLE IF NOT EXISTS pay_rates (
+    staff_id TEXT PRIMARY KEY REFERENCES staff(id) ON DELETE CASCADE,
+    cents_per_hour INTEGER NOT NULL CHECK(cents_per_hour >= 0), updated_at TEXT NOT NULL
   );
   CREATE TABLE IF NOT EXISTS audit_log (
     id TEXT PRIMARY KEY, actor_id TEXT REFERENCES staff(id),
