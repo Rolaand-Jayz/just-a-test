@@ -1,0 +1,23 @@
+services:
+  rescue1:
+    build: .
+    environment:
+      HOST: 0.0.0.0
+      PORT: "8080"
+      R1_DB_PATH: /app/var/rescue1.sqlite
+      NODE_ENV: development # Local-only. Use production only behind TLS termination.
+    ports:
+      - "127.0.0.1:8080:8080"
+    volumes:
+      - rescue1_data:/app/var
+      - rescue1_backups:/app/backups
+    init: true
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:8080/api/health').then(x => process.exit(x.ok ? 0 : 1)).catch(() => process.exit(1))"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+volumes:
+  rescue1_data:
+  rescue1_backups:

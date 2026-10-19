@@ -1,0 +1,71 @@
+name: Rescue 1 — build and security checks
+on:
+  push:
+    branches: [feat/rescue1-premium-redesign]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22.16.0'
+      - name: Check JavaScript syntax
+        run: |
+          node --check app/server.mjs
+          node --check app/db.mjs
+          node --check app/auth.mjs
+          node --check app/api.mjs
+          node --check app/bootstrap.mjs
+          node --check app/ui/app.js
+          node --check script.js
+      - name: Run full automated tests
+        run: npm test
+      - name: Validate production container build
+        run: docker build --pull -t rescue1-site:test .
+      - name: Run real Chromium visual review
+        shell: bash
+        run: |
+          set -euo pipefail
+          npm install --no-save --package-lock=false playwright-core@1.56.1
+          export CHROME_BIN="$(command -v google-chrome || command -v chromium || command -v chromium-browser)"
+          mkdir -p visual-review
+          node tests/visual-qa.mjs
+      - name: Upload visual review screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: rescue1-visual-review
+          path: visual-review/
+          if-no-files-found: ignore
+          retention-days: 30
+      - name: Package independent deployable application
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p dist/rescue1-movers
+          mkdir -p dist/rescue1-movers/media
+          cp snapshot/assets/912b0c6b7cebeab5972b.webp dist/rescue1-movers/media/crew-furniture.webp
+          cp snapshot/assets/55dee197524ef05c3742.webp dist/rescue1-movers/media/crew-doorway.webp
+          cp snapshot/assets/5d3b6b1812e0c88596b1.webp dist/rescue1-movers/media/crew-moving.webp
+          cp -a app services tests scripts Dockerfile compose.yaml .dockerignore index.html 404.html styles.css script.js favicon.svg \
+            robots.txt sitemap.xml moving-guide.html package.json README.md \
+            dist/rescue1-movers/
+          cp -a DEPLOYMENT.md dist/rescue1-movers/
+          tar -C dist -czf rescue1-movers-deployable.tar.gz rescue1-movers
+      - name: Upload ready-to-deploy application bundle
+        uses: actions/upload-artifact@v4
+        with:
+          name: rescue1-movers-deployable
+          path: rescue1-movers-deployable.tar.gz
+          if-no-files-found: error
+          retention-days: 30

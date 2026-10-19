@@ -1,0 +1,17 @@
+{
+  "name": "rescue1-movers",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Rescue 1 Movers public site and employee operations Command Center",
+  "scripts": {
+    "start": "node app/server.mjs",
+    "dev": "node --watch app/server.mjs",
+    "init": "node app/bootstrap.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "backup": "node scripts/backup.mjs"
+  },
+  "engines": {
+    "node": ">=22.16.0"
+  }
+}
