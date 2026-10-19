@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<meta name="theme-color" content="#11161a">
+<title>Rescue 1 Command Center</title>
+<link rel="icon" href="/favicon.svg"><link rel="stylesheet" href="/staff/style.css">
+<script defer src="/staff/app.js"></script>
+</head><body>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<main id="auth-screen" class="auth-screen" hidden>
+ <div class="auth-mark"><span class="auth-emblem">1</span><span class="wordmark">RESCUE <strong>1</strong><small>MOVERS / STAFF SYSTEM</small></span></div>
+ <section class="auth-card">
+   <p class="kicker"><span class="red-dot"></span> AUTHORIZED EMPLOYEES ONLY</p>
+   <h1 id="auth-heading">REPORTING<br>FOR DUTY<span class="accent">.</span></h1>
+   <p id="auth-description">Sign in to access your assigned Rescue 1 operations, scheduling, and team tools.</p>
+   <form id="login-form">
+     <label>WORK EMAIL <input name="email" type="email" autocomplete="username" required placeholder="you@company.com"></label>
+     <label>PASSWORD <input name="password" type="password" autocomplete="current-password" required placeholder="Your password"></label>
+     <button class="primary wide" type="submit">SIGN IN <span>↗</span></button>
+   </form>
+   <form id="password-form" hidden>
+     <label>CURRENT PASSWORD <input name="current" type="password" autocomplete="current-password" required></label>
+     <label>NEW PASSWORD (12+ CHARACTERS) <input name="next" type="password" autocomplete="new-password" minlength="12" required></label>
+     <button class="primary wide" type="submit">UPDATE PASSWORD <span>↗</span></button>
+   </form>
+   <p class="auth-foot">Private employee system. Access is controlled by your assigned role. No public sign-up.</p>
+ </section>
+ <span class="auth-corner">AMARILLO, TX&nbsp; /&nbsp; SERVICE FIRST.</span>
+</main>
+<div id="workspace" class="workspace" hidden>
+ <aside class="sidebar" id="sidebar">
+   <a class="portal-logo" href="/staff" aria-label="Rescue 1 Command Center"><span class="logo-box">1</span><span>RESCUE <strong>1</strong><small>COMMAND CENTER</small></span></a>
+   <div class="sidebar-company"><span class="red-dot"></span> RESCUE 1 MOVERS <span class="status-label">LIVE</span></div>
+   <nav id="nav" class="module-nav" aria-label="Portal navigation"></nav>
+   <div class="sidebar-bottom"><div class="signed-in"><span class="avatar" id="avatar">R</span><div><strong id="current-name">Employee</strong><small id="current-role">Crew</small></div></div><button class="signout" type="button" id="logout">SIGN OUT ↗</button></div>
+ </aside>
+ <div class="workarea">
+   <header class="topbar"><div class="topbar-left"><button type="button" id="sidebar-toggle" class="icon-btn" aria-label="Toggle navigation">☰</button><span class="crumb-root">RESCUE 1</span><span class="crumb-sep">/</span><span id="crumb-current">OVERVIEW</span></div><div class="topbar-right"><span class="live-indicator"><span class="red-dot"></span> OPERATIONS ONLINE</span><a href="/" target="_blank" rel="noopener noreferrer" class="site-link">PUBLIC SITE ↗</a><span class="top-avatar" id="top-avatar">R</span></div></header>
+   <div class="work-content">
+     <section class="page-head"><div><p class="kicker" id="module-kicker">THE BIG PICTURE</p><h1 id="module-heading">COMMAND <span>OVERVIEW.</span></h1><p id="module-subtitle" class="module-subtitle">A live view of the business, all in one place.</p></div><div id="head-actions"></div></section>
+     <section id="screen" aria-live="polite"></section>
+   </div>
+ </div>
+</div>
+<div id="dialog-backdrop" class="dialog-backdrop" hidden>
+ <div class="dialog" role="dialog" aria-modal="true" aria-labelledby="dialog-title" tabindex="-1">
+  <header class="dialog-header"><div><p class="kicker">RESCUE 1 / RECORD EDITOR</p><h2 id="dialog-title">NEW RECORD</h2></div><button type="button" class="close-btn" id="close-dialog" aria-label="Close dialog">×</button></header>
+  <form id="record-form"><div id="dialog-body"></div><div class="dialog-actions"><button class="secondary" type="button" id="cancel-dialog">CANCEL</button><button class="primary" type="submit" id="save-dialog">SAVE CHANGES ↗</button></div></form>
+ </div>
+</div>
+<noscript><p class="noscript">JavaScript is required for the employee operations portal. The public moving website remains accessible without JavaScript.</p></noscript>
+</body></html>
