@@ -872,3 +872,11 @@ body{background:var(--cream);color:var(--ink)}
  .dispatch-ribbon{gap:13px;padding-inline:25px}
  .dispatch-ribbon-end{display:none}
 }
+
+
+/* QA identified the map's minimum aspect ratio as the tablet overflow,
+   not the typography. Stack this illustration rather than compress it. */
+@media(min-width:761px) and (max-width:900px){
+ .areas-layout{grid-template-columns:minmax(0,1fr);gap:46px}
+ .map-art{width:min(100%,630px);justify-self:center;min-height:360px}
+}
