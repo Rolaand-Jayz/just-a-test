@@ -32,6 +32,27 @@ For PowerShell, set environment variables with \`$env:R1_OWNER_NAME='...'\`, \`$
 
 The app listens on 127.0.0.1:8080 by default. Set \`PORT\` to override the port. Set \`R1_DB_PATH\` to an **absolute path** in a writable, private directory to store your SQLite database elsewhere. Data defaults to \`var/rescue1.sqlite\`. The \`var/\` and \`backups/\` folders are ignored by Git.
 
+
+## Optional Docker deployment (local development)
+
+The same folder also contains a \`Dockerfile\` and \`compose.yaml\`. The provided Compose configuration **binds only to 127.0.0.1** and intentionally uses development cookie settings for local HTTP. It is not an Internet-facing production configuration.
+
+\`\`\`bash
+docker compose build
+read -r -p 'Owner name: ' R1_OWNER_NAME
+read -r -p 'Owner email: ' R1_OWNER_EMAIL
+read -rs -p 'Owner initial password: ' R1_OWNER_PASSWORD
+echo
+export R1_OWNER_NAME R1_OWNER_EMAIL R1_OWNER_PASSWORD
+docker compose run --rm -e R1_OWNER_NAME -e R1_OWNER_EMAIL -e R1_OWNER_PASSWORD rescue1 node app/bootstrap.mjs
+unset R1_OWNER_PASSWORD
+docker compose up -d
+\`\`\`
+
+Then browse to **http://127.0.0.1:8080/** or **http://127.0.0.1:8080/staff**.
+
+The named \`rescue1_data\` volume stores SQLite files, and \`rescue1_backups\` stores local backups. Do not run \`docker compose down -v\` if you want to retain company data; deleting volumes deletes the database. To use Docker in production, place the service behind a trusted TLS-terminating proxy, set \`NODE_ENV=production\`, remove any publicly exposed app ports, and follow the production hardening checklist.
+
 ## Production deployment: required controls
 
 Do **not** expose the Node process directly to the Internet or run an employee system over plain HTTP.
