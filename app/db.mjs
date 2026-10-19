@@ -9,8 +9,8 @@ export const ACTIONS = ['view','create','edit','delete','assign','approve','expo
 const DEFAULT = {
  owner:['*:*'],
  admin:['announcements:*','chat:*','payroll:view','overview:view','quotes:*','leads:*','customers:*','jobs:*','dispatch:*','time:*','leave:*','expenses:*','invoices:*','reports:*','staff:view','staff:create','staff:edit','audit:view'],
- operations:['announcements:*','chat:*','quotes:view','quotes:edit','overview:view','leads:view','leads:edit','customers:view','jobs:*','dispatch:*','time:view','time:approve','leave:view','reports:view'],
- dispatcher:['announcements:view','chat:*','quotes:view','overview:view','leads:view','customers:view','jobs:view','jobs:edit','jobs:assign','dispatch:view','dispatch:edit','dispatch:assign','time:view'],
+ operations:['staff:view','announcements:*','chat:*','quotes:view','quotes:edit','overview:view','leads:view','leads:edit','customers:view','jobs:*','dispatch:*','time:view','time:approve','leave:view','reports:view'],
+ dispatcher:['staff:view','announcements:view','chat:*','quotes:view','overview:view','leads:view','customers:view','jobs:view','jobs:edit','jobs:assign','dispatch:view','dispatch:edit','dispatch:assign','time:view'],
  sales:['announcements:view','chat:*','quotes:*','overview:view','leads:*','customers:*','jobs:view','reports:view'],
  finance:['announcements:view','chat:*','quotes:view','quotes:edit','payroll:*','overview:view','leads:view','customers:view','jobs:view','time:view','expenses:*','invoices:*','reports:view','reports:export'],
  hr:['announcements:*','chat:*','payroll:*','overview:view','jobs:view','time:*','leave:*','staff:view','staff:create','staff:edit','reports:view'],
@@ -133,8 +133,8 @@ export function openDatabase(file) {
   CREATE INDEX IF NOT EXISTS jobs_date_idx ON jobs(move_date);
   CREATE INDEX IF NOT EXISTS time_staff_idx ON time_entries(staff_id);
   `);
-  if (!db.prepare('SELECT 1 AS ok FROM permissions LIMIT 1').get()) {
-    const insert=db.prepare('INSERT INTO permissions(role,resource,action,allowed) VALUES (?,?,?,?)');
+  {
+    const insert=db.prepare('INSERT OR IGNORE INTO permissions(role,resource,action,allowed) VALUES (?,?,?,?)');
     for(const role of ROLES) for(const resource of RESOURCES) for(const action of ACTIONS) {
       const allowed = DEFAULT[role].some(rule => {
         const parts=rule.split(':');
