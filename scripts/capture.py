@@ -20,11 +20,11 @@ from bs4 import BeautifulSoup
 BASE = "https://www.rescue1movers.com/"
 OUTPUT = Path("snapshot")
 PAGE_LIMIT = 20
-ASSET_LIMIT = 180
+ASSET_LIMIT = 450
 MAX_ASSET_BYTES = 14 * 1024 * 1024
 MAX_ALL_ASSETS_BYTES = 110 * 1024 * 1024
 PAGE_HOSTS = {"www.rescue1movers.com", "rescue1movers.com"}
-STATIC_HOST_SUFFIXES = ("squarespace.com", "squarespace-cdn.com")
+STATIC_HOST_SUFFIXES = ("squarespace.com", "squarespace-cdn.com", "sqspcdn.com")
 STATIC_EXTRA_HOSTS = {"fonts.googleapis.com", "fonts.gstatic.com"}
 STATIC_EXTENSIONS = {
     ".css", ".js", ".mjs", ".png", ".jpg", ".jpeg", ".webp",
@@ -196,9 +196,13 @@ def capture_pages() -> None:
 
 def asset_extension(url: str, content_type: str) -> str:
     ext = Path(urlparse(url).path).suffix.lower()
+    ctype = content_type.split(";")[0].strip()
+    # Squarespace may return WebP bytes for a .JPG or .png URL.
+    # Keep the saved extension aligned with the received file format.
+    if ctype in ("image/webp", "image/avif"):
+        return ".webp" if ctype == "image/webp" else ".avif"
     if ext in STATIC_EXTENSIONS:
         return ext
-    ctype = content_type.split(";")[0].strip()
     special = {
         "text/css": ".css",
         "text/javascript": ".js",
