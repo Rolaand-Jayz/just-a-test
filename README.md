@@ -1,31 +1,41 @@
-# Rescue 1 Movers — public website technology baseline
+# Rescue 1 Movers — Premium Website & Command Center
 
-**Source:** https://www.rescue1movers.com/  
-**Purpose:** Preserve the *publicly delivered* technology and content of the existing website before proposing changes. This is not a redesign or a replacement for the Squarespace account.
+A complete redesign of [rescue1movers.com](https://www.rescue1movers.com/) with a working, persistent employee operations app.
 
-## Observed live stack (2026-10-18)
-- **Website builder/hosting:** Squarespace (identified by the site's own "Made with Squarespace" footer and Squarespace-hosted images).
-- **Quote/estimate workflow:** Embedded SmartMoving form hosted by `portal.smartmoving.com`.
-- **Public pages independently observed:** `/` and `/contact`.
-- **Image hosting:** `images.squarespace-cdn.com`.
-- **Original Squarespace templates, private CMS/database, account settings, and SmartMoving backend:** Not publicly retrievable and **not** included.
+**Status:** Implementation is under review. The live Squarespace domain has **not** been modified or migrated.
 
-## Capturing the real site, as served
+## What's included
 
-This repository contains a one-time GitHub Actions capture workflow at `.github/workflows/capture.yml`, plus `scripts/capture.py`.
+- Responsive high-impact moving company homepage with the real Rescue 1 brand, team photography and SmartMoving quotation widget.
+- Five dedicated moving service pages, local SEO, real moving guide and personalized browser-local moving checklist.
+- Employee Command Center at **/staff**, backed by a real SQLite database and Node.js HTTP server.
+- Invite-only accounts with owner, admin, operations, dispatcher, sales, finance, HR, crew roles and persistent granular permissions.
+- Leads, customers, quotations, moving jobs, crew assignments, employee time, leave, expenses, invoices, payment recording, payroll estimates, announcements, crew chat, reports, audit history.
+- Real business data persistence, scrypt passwords, server-side authorization, cookie-based sessions, CSRF protection and login throttling.
+- No mandatory paid dependencies for the core application.
 
-The capture saves:
-- Exact HTML response bodies under `snapshot/pages/` (no hand-written rewrite).
-- HTTP metadata, discovered page URLs and externally hosted integration references.
-- Downloadable public CSS, JavaScript, fonts and image files under `snapshot/assets/`, when accessible and within size limits.
-- File checksums and URLs in `snapshot/manifest.json`.
+## Start
 
-The original page HTML is intentionally preserved *unmodified*. CSS and JavaScript may depend on Squarespace-hosted APIs, so a public-facing snapshot is **not** a deployable copy of the whole Squarespace application. The SmartMoving quote form remains external.
+Requires Node.js **22.16+**. Download the repository or a verified CI release artifact, extract it, and follow [DEPLOYMENT.md](DEPLOYMENT.md) to create the first owner account.
 
-The workflow runs once when its configuration is first pushed, and can be re-run manually from **Actions → Capture public website baseline → Run workflow**. The task does not publish or modify the live website. Subsequent snapshots replace the previous captured baseline; use Git history to compare versions.
+\`\`\`bash
+node app/bootstrap.mjs   # Requires R1_OWNER_NAME / R1_OWNER_EMAIL / R1_OWNER_PASSWORD
+npm start
+\`\`\`
 
-## Limitations and stewardship
+Public website: **http://127.0.0.1:8080/**  
+Staff Command Center: **http://127.0.0.1:8080/staff**
 
-This is a technical baseline, not evidence of ownership of website assets or an export of proprietary Squarespace source. Confirm with the business that you may reproduce its text, logos and photographs in this **public** GitHub repository. Consider making the repository private if permission to redistribute assets is uncertain.
+Run \`npm test\` before publishing. Production requires HTTPS, backup/restore policies, credential management, owner acceptance testing and compliance reviews.
 
-If a complete, editable migration is required, obtain authorized access to the Squarespace site and domain/asset records and rebuild or migrate separately. Do not treat the public capture as a Squarespace project export.
+**Important:** Quotes and payments entered in the Command Center are records, not external transactions. Payroll reports are estimates, not payroll processing. The public SmartMoving form still submits to SmartMoving; it is not yet bidirectionally synchronized with this app. No default staff accounts exist.
+
+## Original live-site snapshot
+
+The earlier frontend capture is preserved separately in \`snapshot/\`, with original delivered HTML, downloaded public resources and a machine-readable [manifest](snapshot/manifest.json). It documents the pre-redesign Squarespace technology; **it is not** the application served by \`npm start\`.
+
+## Review and license
+
+This is a proposal for the company's approval, not an authorized replacement of its production Squarespace site. Obtain the business's permission for images/logos and a data-processing agreement before handling live employee, customer or financial information.
+
+See [DEPLOYMENT.md](DEPLOYMENT.md) for the full architecture, setup, limitations, security and deployment handoff.
