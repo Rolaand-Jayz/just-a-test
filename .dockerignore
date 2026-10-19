@@ -1,0 +1,15 @@
+.git
+.github
+snapshot
+var
+backups
+data
+dist
+node_modules
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+.env
+.env.*
+!*.example
+*.log
