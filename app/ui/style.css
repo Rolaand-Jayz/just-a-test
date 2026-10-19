@@ -175,3 +175,17 @@ body{background:var(--bg);color:var(--text)}
 /* Contrast repair from authenticated screenshot review. */
 .notice strong,.note-panel strong{color:#172820}
 .sidebar .signed-in strong{color:#f8f2df}
+
+
+/* Authenticated mobile visual inspection: no stacked title collisions,
+   and an intentional two-column dispatch metrics board. */
+.page-head h1{line-height:1.03}
+@media(max-width:760px){
+ .page-head h1{line-height:1.08;font-size:clamp(44px,10.5vw,69px)}
+ .dashboard-stats{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+ .stat-card{padding:17px 14px;min-height:145px}
+ .stat-card::after{right:10px;top:12px;font-size:27px}
+ .stat-label{font-size:9px;line-height:1.5;max-width:95px}
+ .stat-value{font-size:58px;margin-top:7px}
+ .stat-caption{font-size:8px;line-height:1.5;margin-top:9px}
+}
