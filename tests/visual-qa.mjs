@@ -83,8 +83,20 @@ try{
  const login=async(page,email,password)=>{
   await page.locator('#login-form input[name=email]').fill(email);
   await page.locator('#login-form input[name=password]').fill(password);
+  const resultPromise=page.waitForResponse(response=>response.url().endsWith('/api/auth/login'),{timeout:15000});
   await page.locator('#login-form button[type=submit]').click();
-  await page.locator('#workspace').waitFor({state:'visible',timeout:15000});
+  const response=await resultPromise;
+  const body=await response.text();
+  console.log('VISUAL LOGIN:',response.status(),body.slice(0,280).replace(/"csrf":"[^"]+"/g,'"csrf":"[redacted]"'));
+  try{
+   await page.locator('#workspace').waitFor({state:'visible',timeout:8000});
+  }catch(e){
+   const warning=await page.locator('#toast').innerText().catch(()=>'(none)');
+   const current=await page.locator('#auth-heading').innerText().catch(()=>'(not found)');
+   console.error('VISUAL SIGN-IN DIAG:',JSON.stringify({heading:current,warning,visible:await page.locator('#workspace').isVisible()}));
+   await page.screenshot({path:join(output,'staff-login-failure.png'),fullPage:true});
+   throw e;
+  }
  };
  for(const [name,target,width,height] of [
   ['staff-owner-dashboard','overview',1440,900],
