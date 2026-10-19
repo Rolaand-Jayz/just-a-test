@@ -12,7 +12,7 @@ const DEFAULT = {
  operations:['staff:view','announcements:*','chat:*','quotes:view','quotes:edit','overview:view','leads:view','leads:edit','customers:view','jobs:*','dispatch:*','time:view','time:approve','leave:view','reports:view'],
  dispatcher:['staff:view','announcements:view','chat:*','quotes:view','overview:view','leads:view','customers:view','jobs:view','jobs:edit','jobs:assign','dispatch:view','dispatch:edit','dispatch:assign','time:view'],
  sales:['announcements:view','chat:*','quotes:*','overview:view','leads:*','customers:*','jobs:view','reports:view'],
- finance:['announcements:view','chat:*','quotes:view','quotes:edit','payroll:*','overview:view','leads:view','customers:view','jobs:view','time:view','expenses:*','invoices:*','reports:view','reports:export'],
+ finance:['staff:view','announcements:view','chat:*','quotes:view','quotes:edit','payroll:*','overview:view','leads:view','customers:view','jobs:view','time:view','expenses:*','invoices:*','reports:view','reports:export'],
  hr:['announcements:*','chat:*','payroll:*','overview:view','jobs:view','time:*','leave:*','staff:view','staff:create','staff:edit','reports:view'],
  crew:['announcements:view','chat:view','chat:create','overview:view','jobs:view','time:view','time:create','time:edit','leave:view','leave:create']
 };
