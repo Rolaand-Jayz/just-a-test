@@ -10,7 +10,7 @@ Home, About, Services, Communities, Resources, Contact.
 
 ## Design and assets
 
-The redesign uses the **official horizontal company logo** and **real community and team photography** from the existing website. These are linked directly to the site's publicly accessible WordPress uploads for the preview. Confirm appropriate reuse or migrate approved assets to self-hosting before production.
+The redesign uses the **official horizontal company logo** and **real community and team photography** from the existing website. The GitHub Pages workflow downloads approved public images from the current WordPress media URLs during each build and bundles them with the static preview. This avoids fragile cross-site hotlinks. Confirm appropriate reuse or migrate approved assets to self-hosting before production.
 
 The layout is responsive for desktop, ultrawide, tablet, and phone; it includes accessible mobile navigation, a searchable community directory, and reduced-motion support.
 

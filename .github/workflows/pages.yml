@@ -19,6 +19,26 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Stage existing business photography and branding
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p site/assets/original
+          curl --fail --location --silent --show-error --retry 2 --max-time 75 'https://associationservicesbcs.com/wp-content/uploads/2024/06/Final-BCS-Logos_Logo-Horizontal-2_Color-e1720023434331-1536x421.png' -o 'site/assets/original/logo.png'
+          curl --fail --location --silent --show-error --retry 2 --max-time 75 'https://associationservicesbcs.com/wp-content/uploads/2024/06/ASBCS-Logos_Tagline_White-1536x456.png' -o 'site/assets/original/logo-white.png'
+          curl --fail --location --silent --show-error --retry 2 --max-time 75 'https://associationservicesbcs.com/wp-content/uploads/2025/01/cloisters-bennett-nov2024-157.jpg' -o 'site/assets/original/cloisters-bennett.jpg'
+          curl --fail --location --silent --show-error --retry 2 --max-time 75 'https://associationservicesbcs.com/wp-content/uploads/2025/01/southern-trace-nov2024-094.jpg' -o 'site/assets/original/southern-trace.jpg'
+          curl --fail --location --silent --show-error --retry 2 --max-time 75 'https://associationservicesbcs.com/wp-content/uploads/2025/01/woodland-hills-nov2024-180.jpg' -o 'site/assets/original/woodland-hills.jpg'
+          curl --fail --location --silent --show-error --retry 2 --max-time 75 'https://associationservicesbcs.com/wp-content/uploads/2025/01/stone-forest-nov2024-099.jpg' -o 'site/assets/original/stone-forest.jpg'
+          curl --fail --location --silent --show-error --retry 2 --max-time 75 'https://associationservicesbcs.com/wp-content/uploads/2025/01/sun-meadows-nov2024-110.jpg' -o 'site/assets/original/sun-meadows.jpg'
+          curl --fail --location --silent --show-error --retry 2 --max-time 75 'https://associationservicesbcs.com/wp-content/uploads/2025/01/park-meadow-nov2024-053.jpg' -o 'site/assets/original/park-meadow.jpg'
+          curl --fail --location --silent --show-error --retry 2 --max-time 75 'https://associationservicesbcs.com/wp-content/uploads/2025/01/williams-gate-nov2024-122.jpg' -o 'site/assets/original/williams-gate.jpg'
+          curl --fail --location --silent --show-error --retry 2 --max-time 75 'https://associationservicesbcs.com/wp-content/uploads/2025/01/copperfield-nov2024-027.jpg' -o 'site/assets/original/copperfield.jpg'
+          curl --fail --location --silent --show-error --retry 2 --max-time 75 'https://associationservicesbcs.com/wp-content/uploads/2025/01/estates-at-river-run-nov2024-050.jpg' -o 'site/assets/original/estates-river-run.jpg'
+          curl --fail --location --silent --show-error --retry 2 --max-time 75 'https://associationservicesbcs.com/wp-content/uploads/2024/11/Tiffany2-copy.jpg' -o 'site/assets/original/tiffany.jpg'
+          curl --fail --location --silent --show-error --retry 2 --max-time 75 'https://associationservicesbcs.com/wp-content/uploads/2024/09/Lauren.jpeg' -o 'site/assets/original/lauren.jpeg'
+          curl --fail --location --silent --show-error --retry 2 --max-time 75 'https://associationservicesbcs.com/wp-content/uploads/2024/11/Katy-copy.jpg' -o 'site/assets/original/katy.jpg'
+          file site/assets/original/*
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Upload static website
