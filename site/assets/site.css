@@ -477,3 +477,16 @@ h3{font-weight:600}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
 @media(prefers-contrast:more){.site-header,.hero-contact-sheet,.action-row,.register-lines a,.community-index li{border-color:currentColor!important}}
+
+/* Intrinsic sizing guards: preserve all controls when a viewport becomes narrow. */
+.quickdesk-intro,.quickdesk-actions,.action-description{min-width:0}
+.action-description strong,.action-description small{overflow-wrap:anywhere}
+@media(max-width:900px){
+  .quickdesk-grid{grid-template-columns:minmax(0,1fr)}
+}
+@media(max-width:520px){
+  .quickdesk-intro h2{font-size:clamp(42px,10vw,52px)}
+}
+@media(max-width:350px){
+  .quickdesk-intro h2{font-size:41px}
+}
