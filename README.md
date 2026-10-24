@@ -1,17 +1,19 @@
-# Association Services BCS — Neighborhood Register design preview
+# Association Services BCS — Community Service Interface
 
-Public preview: https://rolaand-jayz.github.io/just-a-test/
+Public design preview: https://rolaand-jayz.github.io/just-a-test/
 
-A ground-up responsive redesign concept, visually inspired by local neighborhood records and architectural grids. Six standalone pages share a custom information hierarchy and typography system; light and dark themes default to the visitor's browser preference, with a saved manual toggle.
+This design has no traditional marketing hero. The home screen is a functioning **community service desk**: direct homeowner actions, a searchable 22-entry neighborhood directory, local photography as a documentary record, and concise information for boards and developers.
 
-## Current boundaries
+## Layout identity
 
-- This is a **design preview**, not Association Services BCS's production site.
-- Owner authentication, account services and forms continue on the official website, powered by the existing management system (Vantaca). The preview does not replicate or claim any authenticated capability.
-- Original logo, community photography and staff portraits are staged into the deployed Pages artifact by the GitHub Actions workflow. These remain existing assets from associationservicesbcs.com, not AI-generated images.
-- No fabricated maps or community locations. Community directory links open the official directory; local search filters the 22 known names.
-- The preview uses noindex/nofollow to avoid accidental search indexing.
+- A persistent, numbered navigation index for wide desktop windows.
+- A functional, accessible navigation drawer for narrow browser windows.
+- Fluid content-first layouts using CSS container units and container queries; spacing adjusts continuously as the *available pane width* changes.
+- Light and dark palettes default to the user's browser preference; manual changes are saved.
+- No giant display-serif slogans, gradient hero photos, promotional cards, or fabricated metrics.
+- Original Association Services BCS photography, staff portraits and business logo; no generated substitutes.
+- Existing authenticated Vantaca portal and official form links remain external. This is a nonindexed public **design preview**, not a production replacement.
 
-## Responsive behavior
+## Review
 
-Fluid layouts and content-driven CSS breakpoints (1220, 1040, 900, 740, 520 and 350 pixels) preserve navigation, portal links, theme control, community search and resource actions across viewport widths. Reduced-motion and keyboard interaction are supported.
+A responsive tester is at `/responsive/`, with selectable viewport widths and a horizontal overflow indicator. The live business site is unchanged.

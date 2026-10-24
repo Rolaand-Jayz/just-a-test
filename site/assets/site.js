@@ -1,88 +1,90 @@
 (() => {
   'use strict';
-  const root = document.documentElement;
-  const themeButton = document.querySelector('.theme-switch');
-  const themeLabel = document.querySelector('.theme-text');
-  const themeSymbol = document.querySelector('.theme-symbol');
-  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
-  const storedTheme = () => {
-    try { return localStorage.getItem('asbcs-theme'); }
-    catch { return null; }
+  const root=document.documentElement;
+  const prefersDark=window.matchMedia('(prefers-color-scheme: dark)');
+  const themeButtons=[...document.querySelectorAll('.theme-control')];
+  const currentTheme=() => root.dataset.theme==='dark'||root.dataset.theme==='light'
+    ?root.dataset.theme:(prefersDark.matches?'dark':'light');
+  const updateTheme=() => {
+    const next=currentTheme()==='dark'?'light':'dark';
+    for(const b of themeButtons){
+      b.setAttribute('aria-label','Switch to '+next+' mode');
+      b.setAttribute('title','Switch to '+next+' mode');
+      const label=b.querySelector('.theme-label');
+      const indicator=b.querySelector('.theme-indicator');
+      if(label)label.textContent='SWITCH TO '+next.toUpperCase();
+      if(indicator)indicator.textContent=next==='dark'?'☾':'☼';
+    }
   };
-  const currentTheme = () => {
-    const explicit = root.dataset.theme;
-    return explicit === 'light' || explicit === 'dark'
-      ? explicit : (prefersDark.matches ? 'dark' : 'light');
-  };
-  const updateThemeControl = () => {
-    const target = currentTheme() === 'dark' ? 'light' : 'dark';
-    themeButton.setAttribute('aria-label', 'Switch to ' + target + ' mode');
-    themeButton.setAttribute('title', 'Switch to ' + target + ' mode');
-    themeLabel.textContent = target.toUpperCase();
-    themeSymbol.textContent = target === 'light' ? '☼' : '☾';
-  };
-  if (themeButton) {
-    updateThemeControl();
-    themeButton.addEventListener('click', () => {
-      const next = currentTheme() === 'dark' ? 'light' : 'dark';
-      root.dataset.theme = next;
-      try { localStorage.setItem('asbcs-theme', next); }
-      catch { /* Local storage is optional; the toggle still works. */ }
-      updateThemeControl();
-    });
-    const onPreferenceChange = () => {
-      if (!root.dataset.theme && !storedTheme()) updateThemeControl();
-    };
-    if (prefersDark.addEventListener) prefersDark.addEventListener('change', onPreferenceChange);
-    else if (prefersDark.addListener) prefersDark.addListener(onPreferenceChange);
-  }
+  updateTheme();
+  themeButtons.forEach(button=>button.addEventListener('click',()=>{
+    const next=currentTheme()==='dark'?'light':'dark';
+    root.dataset.theme=next;
+    try{localStorage.setItem('asbcs-theme',next)}catch{}
+    updateTheme();
+  }));
+  const mqChange=()=>{if(!root.dataset.theme)updateTheme()};
+  if(prefersDark.addEventListener)prefersDark.addEventListener('change',mqChange);
+  else if(prefersDark.addListener)prefersDark.addListener(mqChange);
 
-  const menuButton = document.querySelector('.menu-toggle');
-  const nav = document.querySelector('.main-nav');
-  const closeMenu = () => {
-    if (!menuButton || !nav) return;
-    menuButton.setAttribute('aria-expanded', 'false');
-    menuButton.setAttribute('aria-label', 'Open navigation');
-    nav.classList.remove('is-open');
+  const rail=document.querySelector('#site-rail');
+  const menuButton=document.querySelector('.mobile-menu');
+  const compact=window.matchMedia('(max-width:1080px)');
+  const setRail=open=>{
+    if(!rail||!menuButton)return;
+    const shouldOpen=Boolean(open)&&compact.matches;
+    rail.classList.toggle('is-open',shouldOpen);
+    rail.inert=compact.matches&&!shouldOpen;
+    menuButton.setAttribute('aria-expanded',String(shouldOpen));
+    menuButton.setAttribute('aria-label',shouldOpen?'Close site menu':'Open site menu');
+    document.body.classList.toggle('nav-open',shouldOpen);
   };
-  if (menuButton && nav) {
-    menuButton.addEventListener('click', () => {
-      const isOpen = menuButton.getAttribute('aria-expanded') === 'true';
-      menuButton.setAttribute('aria-expanded', String(!isOpen));
-      menuButton.setAttribute('aria-label', isOpen ? 'Open navigation' : 'Close navigation');
-      nav.classList.toggle('is-open', !isOpen);
-    });
-    nav.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
-    document.addEventListener('keydown', event => {
-      if (event.key === 'Escape') { closeMenu(); menuButton.focus(); }
-    });
-    document.addEventListener('click', event => {
-      if (!nav.contains(event.target) && !menuButton.contains(event.target)) closeMenu();
-    });
-    const desktop = window.matchMedia('(min-width: 1041px)');
-    if (desktop.addEventListener) desktop.addEventListener('change', closeMenu);
-    else if (desktop.addListener) desktop.addListener(closeMenu);
-  }
-  const page = document.body.dataset.page;
-  if (page && page !== 'home') {
-    const active = document.querySelector('[data-nav="' + page + '"]');
-    if (active) { active.classList.add('active'); active.setAttribute('aria-current', 'page'); }
-  }
-  const search = document.querySelector('#community-search');
-  if (search) {
-    const rows = [...document.querySelectorAll('#community-directory li')];
-    const count = document.querySelector('#directory-count');
-    const empty = document.querySelector('#directory-empty');
-    search.addEventListener('input', () => {
-      const term = search.value.trim().toLocaleLowerCase();
-      let visible = 0;
-      for (const row of rows) {
-        const matches = (row.dataset.name || '').includes(term);
-        row.hidden = !matches;
-        if (matches) visible++;
+  if(rail&&menuButton){
+    setRail(false);
+    menuButton.addEventListener('click',()=>setRail(menuButton.getAttribute('aria-expanded')!=='true'));
+    rail.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>setRail(false)));
+    document.addEventListener('keydown',e=>{
+      if(e.key==='Escape'&&menuButton.getAttribute('aria-expanded')==='true'){
+        setRail(false);menuButton.focus();
       }
-      if (count) count.textContent = visible + ' SHOWN';
-      if (empty) empty.hidden = visible !== 0;
     });
+    document.addEventListener('click',e=>{
+      if(menuButton.getAttribute('aria-expanded')==='true'&&!rail.contains(e.target)&&!menuButton.contains(e.target))setRail(false);
+    });
+    if(compact.addEventListener)compact.addEventListener('change',()=>setRail(false));
+    else if(compact.addListener)compact.addListener(()=>setRail(false));
   }
+  const page=document.body.dataset.page;
+  const active=document.querySelector('.rail-nav [data-route="'+page+'"]');
+  if(active){active.classList.add('active');active.setAttribute('aria-current','page')}
+
+  const searches=[...document.querySelectorAll('[data-community-search]')];
+  searches.forEach(input=>{
+    const listId=input.dataset.communitySearch;
+    const list=document.getElementById(listId);
+    if(!list)return;
+    const rows=[...list.querySelectorAll('li[data-name]')];
+    const count=document.getElementById(listId==='home-list'?'home-count':listId+'-count');
+    const empty=document.querySelector('[data-no-results="'+listId+'"]');
+    const filter=()=>{
+      const text=input.value.trim().toLocaleLowerCase();
+      let visible=0;
+      for(const row of rows){
+        const match=(row.dataset.name||'').includes(text);
+        row.hidden=!match;
+        if(match)visible++;
+      }
+      if(count)count.textContent=visible+' RESULT'+(visible===1?'':'S');
+      if(empty)empty.hidden=visible!==0;
+    };
+    input.addEventListener('input',filter);
+  });
+  document.addEventListener('keydown',e=>{
+    if(e.key==='/'&&!e.ctrlKey&&!e.metaKey&&!e.altKey){
+      const el=document.activeElement;
+      if(el&&(/INPUT|TEXTAREA|SELECT/.test(el.tagName)||el.isContentEditable))return;
+      const first=searches[0];
+      if(first){e.preventDefault();first.focus()}
+    }
+  });
 })();

@@ -4,7 +4,7 @@ on:
     branches: [main]
   workflow_dispatch:
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 concurrency:
@@ -24,21 +24,60 @@ jobs:
         run: |
           set -euo pipefail
           mkdir -p site/assets/original
-          curl --fail --location --silent --show-error --retry 2 --max-time 75 'https://i0.wp.com/associationservicesbcs.com/wp-content/uploads/2024/06/Final-BCS-Logos_Logo-Horizontal-2_Color-e1720023434331-1536x421.png' -o 'site/assets/original/logo.png'
-          curl --fail --location --silent --show-error --retry 2 --max-time 75 'https://i0.wp.com/associationservicesbcs.com/wp-content/uploads/2024/06/ASBCS-Logos_Tagline_White-1536x456.png' -o 'site/assets/original/logo-white.png'
-          curl --fail --location --silent --show-error --retry 2 --max-time 75 'https://i0.wp.com/associationservicesbcs.com/wp-content/uploads/2025/01/cloisters-bennett-nov2024-157.jpg' -o 'site/assets/original/cloisters-bennett.jpg'
-          curl --fail --location --silent --show-error --retry 2 --max-time 75 'https://i0.wp.com/associationservicesbcs.com/wp-content/uploads/2025/01/southern-trace-nov2024-094.jpg' -o 'site/assets/original/southern-trace.jpg'
-          curl --fail --location --silent --show-error --retry 2 --max-time 75 'https://i0.wp.com/associationservicesbcs.com/wp-content/uploads/2025/01/woodland-hills-nov2024-180.jpg' -o 'site/assets/original/woodland-hills.jpg'
-          curl --fail --location --silent --show-error --retry 2 --max-time 75 'https://i0.wp.com/associationservicesbcs.com/wp-content/uploads/2025/01/stone-forest-nov2024-099.jpg' -o 'site/assets/original/stone-forest.jpg'
-          curl --fail --location --silent --show-error --retry 2 --max-time 75 'https://i0.wp.com/associationservicesbcs.com/wp-content/uploads/2025/01/sun-meadows-nov2024-110.jpg' -o 'site/assets/original/sun-meadows.jpg'
-          curl --fail --location --silent --show-error --retry 2 --max-time 75 'https://i0.wp.com/associationservicesbcs.com/wp-content/uploads/2025/01/park-meadow-nov2024-053.jpg' -o 'site/assets/original/park-meadow.jpg'
-          curl --fail --location --silent --show-error --retry 2 --max-time 75 'https://i0.wp.com/associationservicesbcs.com/wp-content/uploads/2025/01/williams-gate-nov2024-122.jpg' -o 'site/assets/original/williams-gate.jpg'
-          curl --fail --location --silent --show-error --retry 2 --max-time 75 'https://i0.wp.com/associationservicesbcs.com/wp-content/uploads/2025/01/copperfield-nov2024-027.jpg' -o 'site/assets/original/copperfield.jpg'
-          curl --fail --location --silent --show-error --retry 2 --max-time 75 'https://i0.wp.com/associationservicesbcs.com/wp-content/uploads/2025/01/estates-at-river-run-nov2024-050.jpg' -o 'site/assets/original/estates-river-run.jpg'
-          curl --fail --location --silent --show-error --retry 2 --max-time 75 'https://i0.wp.com/associationservicesbcs.com/wp-content/uploads/2024/11/Tiffany2-copy.jpg' -o 'site/assets/original/tiffany.jpg'
-          curl --fail --location --silent --show-error --retry 2 --max-time 75 'https://i0.wp.com/associationservicesbcs.com/wp-content/uploads/2024/09/Lauren.jpeg' -o 'site/assets/original/lauren.jpeg'
-          curl --fail --location --silent --show-error --retry 2 --max-time 75 'https://i0.wp.com/associationservicesbcs.com/wp-content/uploads/2024/11/Katy-copy.jpg' -o 'site/assets/original/katy.jpg'
+          if [ ! -s 'site/assets/original/logo.png' ]; then
+            curl --fail --location --silent --show-error --retry 3 --retry-all-errors --max-time 75 'https://rolaand-jayz.github.io/just-a-test/assets/original/logo.png' -o 'site/assets/original/logo.png'
+          fi
+          if [ ! -s 'site/assets/original/logo-white.png' ]; then
+            curl --fail --location --silent --show-error --retry 3 --retry-all-errors --max-time 75 'https://rolaand-jayz.github.io/just-a-test/assets/original/logo-white.png' -o 'site/assets/original/logo-white.png'
+          fi
+          if [ ! -s 'site/assets/original/cloisters-bennett.jpg' ]; then
+            curl --fail --location --silent --show-error --retry 3 --retry-all-errors --max-time 75 'https://rolaand-jayz.github.io/just-a-test/assets/original/cloisters-bennett.jpg' -o 'site/assets/original/cloisters-bennett.jpg'
+          fi
+          if [ ! -s 'site/assets/original/southern-trace.jpg' ]; then
+            curl --fail --location --silent --show-error --retry 3 --retry-all-errors --max-time 75 'https://rolaand-jayz.github.io/just-a-test/assets/original/southern-trace.jpg' -o 'site/assets/original/southern-trace.jpg'
+          fi
+          if [ ! -s 'site/assets/original/woodland-hills.jpg' ]; then
+            curl --fail --location --silent --show-error --retry 3 --retry-all-errors --max-time 75 'https://rolaand-jayz.github.io/just-a-test/assets/original/woodland-hills.jpg' -o 'site/assets/original/woodland-hills.jpg'
+          fi
+          if [ ! -s 'site/assets/original/stone-forest.jpg' ]; then
+            curl --fail --location --silent --show-error --retry 3 --retry-all-errors --max-time 75 'https://rolaand-jayz.github.io/just-a-test/assets/original/stone-forest.jpg' -o 'site/assets/original/stone-forest.jpg'
+          fi
+          if [ ! -s 'site/assets/original/sun-meadows.jpg' ]; then
+            curl --fail --location --silent --show-error --retry 3 --retry-all-errors --max-time 75 'https://rolaand-jayz.github.io/just-a-test/assets/original/sun-meadows.jpg' -o 'site/assets/original/sun-meadows.jpg'
+          fi
+          if [ ! -s 'site/assets/original/park-meadow.jpg' ]; then
+            curl --fail --location --silent --show-error --retry 3 --retry-all-errors --max-time 75 'https://rolaand-jayz.github.io/just-a-test/assets/original/park-meadow.jpg' -o 'site/assets/original/park-meadow.jpg'
+          fi
+          if [ ! -s 'site/assets/original/williams-gate.jpg' ]; then
+            curl --fail --location --silent --show-error --retry 3 --retry-all-errors --max-time 75 'https://rolaand-jayz.github.io/just-a-test/assets/original/williams-gate.jpg' -o 'site/assets/original/williams-gate.jpg'
+          fi
+          if [ ! -s 'site/assets/original/copperfield.jpg' ]; then
+            curl --fail --location --silent --show-error --retry 3 --retry-all-errors --max-time 75 'https://rolaand-jayz.github.io/just-a-test/assets/original/copperfield.jpg' -o 'site/assets/original/copperfield.jpg'
+          fi
+          if [ ! -s 'site/assets/original/estates-river-run.jpg' ]; then
+            curl --fail --location --silent --show-error --retry 3 --retry-all-errors --max-time 75 'https://rolaand-jayz.github.io/just-a-test/assets/original/estates-river-run.jpg' -o 'site/assets/original/estates-river-run.jpg'
+          fi
+          if [ ! -s 'site/assets/original/tiffany.jpg' ]; then
+            curl --fail --location --silent --show-error --retry 3 --retry-all-errors --max-time 75 'https://rolaand-jayz.github.io/just-a-test/assets/original/tiffany.jpg' -o 'site/assets/original/tiffany.jpg'
+          fi
+          if [ ! -s 'site/assets/original/lauren.jpeg' ]; then
+            curl --fail --location --silent --show-error --retry 3 --retry-all-errors --max-time 75 'https://rolaand-jayz.github.io/just-a-test/assets/original/lauren.jpeg' -o 'site/assets/original/lauren.jpeg'
+          fi
+          if [ ! -s 'site/assets/original/katy.jpg' ]; then
+            curl --fail --location --silent --show-error --retry 3 --retry-all-errors --max-time 75 'https://rolaand-jayz.github.io/just-a-test/assets/original/katy.jpg' -o 'site/assets/original/katy.jpg'
+          fi
           file site/assets/original/*
+      - name: Preserve original public-site photos and branding in source
+        shell: bash
+        continue-on-error: true
+        run: |
+          git config user.name 'Rolaand-Jayz'
+          git config user.email '162228733+Rolaand-Jayz@users.noreply.github.com'
+          git add site/assets/original
+          if ! git diff --cached --quiet; then
+            git commit -m 'chore(assets): preserve original ASBCS photography and branding'
+            git push origin HEAD:main
+          fi
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Upload static website

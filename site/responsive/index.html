@@ -35,7 +35,8 @@ iframe{display:block;width:100%;height:760px;border:0;background:#fff}
 <button data-width="768" type="button">Tablet</button>
 <button data-width="1024" type="button">Laptop</button>
 <button data-width="1440" type="button">Desktop</button>
-<label for="viewport-slider">Width</label><input type="range" min="320" max="1600" step="1" value="390" id="viewport-slider">
+<button data-width="2560" type="button">Ultrawide</button>
+<label for="viewport-slider">Width</label><input type="range" min="320" max="3440" step="1" value="390" id="viewport-slider">
 <select id="page" aria-label="Page to test"><option value="../">Home</option><option value="../about/">About</option><option value="../services/">Services</option><option value="../communities/">Communities</option><option value="../resources/">Resources</option><option value="../contact/">Contact</option></select>
 <span class="status">VIEWPORT <strong id="current-width">390px</strong> · <strong id="overflow-state">checking…</strong></span>
 </div>
@@ -45,7 +46,7 @@ iframe{display:block;width:100%;height:760px;border:0;background:#fff}
   const frame=document.querySelector('#viewport'),shell=document.querySelector('#device'),slider=document.querySelector('#viewport-slider'),label=document.querySelector('#current-width'),overflow=document.querySelector('#overflow-state');
   const buttons=[...document.querySelectorAll('[data-width]')].filter(x=>x.tagName==='BUTTON');
   const setWidth=w=>{
-    const n=Math.max(320,Math.min(1600,Number(w)||390));
+    const n=Math.max(320,Math.min(3440,Number(w)||390));
     shell.style.width=(n+12)+'px';shell.dataset.width=n;label.textContent=n+'px';slider.value=n;
     buttons.forEach(b=>b.setAttribute('aria-pressed',String(Number(b.dataset.width)===n)));
     requestAnimationFrame(inspect);
