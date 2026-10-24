@@ -1,6 +1,6 @@
 # Association Services BCS — Community Service Interface
 
-Public design preview: https://rolaand-jayz.github.io/just-a-test/?v=4
+Public design preview: https://rolaand-jayz.github.io/just-a-test/?v=5
 
 This design has no traditional marketing hero. The home screen is a functioning **community service desk**: direct homeowner actions, a searchable 22-entry neighborhood directory, local photography as a documentary record, and concise information for boards and developers.
 

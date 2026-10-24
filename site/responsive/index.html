@@ -40,7 +40,7 @@ iframe{display:block;width:100%;height:760px;border:0;background:#fff}
 <select id="page" aria-label="Page to test"><option value="../">Home</option><option value="../about/">About</option><option value="../services/">Services</option><option value="../communities/">Communities</option><option value="../resources/">Resources</option><option value="../contact/">Contact</option></select>
 <span class="status">VIEWPORT <strong id="current-width">390px</strong> · <strong id="overflow-state">checking…</strong></span>
 </div>
-<main class="stage"><div class="device" id="device" data-width="390"><iframe id="viewport" title="Association Services BCS — responsive design at selected width" src="../?v=4" loading="eager"></iframe></div></main>
+<main class="stage"><div class="device" id="device" data-width="390"><iframe id="viewport" title="Association Services BCS — responsive design at selected width" src="../?v=5" loading="eager"></iframe></div></main>
 <script>
 (() => {
   const frame=document.querySelector('#viewport'),shell=document.querySelector('#device'),slider=document.querySelector('#viewport-slider'),label=document.querySelector('#current-width'),overflow=document.querySelector('#overflow-state');
@@ -61,7 +61,7 @@ iframe{display:block;width:100%;height:760px;border:0;background:#fff}
   };
   buttons.forEach(b=>b.addEventListener('click',()=>setWidth(b.dataset.width)));
   slider.addEventListener('input',()=>setWidth(slider.value));
-  document.querySelector('#page').addEventListener('change',e=>{frame.src=e.target.value+"?v=4"});
+  document.querySelector('#page').addEventListener('change',e=>{frame.src=e.target.value+"?v=5"});
   frame.addEventListener('load',inspect);
   const watcher=new ResizeObserver(inspect);watcher.observe(shell);
   setWidth(390);
