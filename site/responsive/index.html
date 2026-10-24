@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>ASBCS — Responsive Proofing</title>
+<style>
+:root{font-family:Arial,Helvetica,sans-serif;color-scheme:dark;background:#121e21;color:#f6f4ef}
+*{box-sizing:border-box}
+body{margin:0}
+header{padding:20px 30px;background:#203235;border-bottom:2px solid #a15b73}
+h1{font-size:18px;letter-spacing:.05em;margin:0 0 5px}
+p{margin:0;color:#c9d5d3;font-size:13px}
+.controls{display:flex;flex-wrap:wrap;gap:10px;padding:16px 30px;background:#162529;align-items:center}
+button,select,input{border:1px solid #617679;color:#f6f4ef;background:#26393d;padding:9px 12px;font:14px Arial,sans-serif}
+button{cursor:pointer}
+button[aria-pressed=true]{border-color:#eab4c1;background:#7d3951}
+input[type=range]{width:min(240px,100%)}
+label{font-size:13px}
+.status{font:12px monospace;color:#b7c6c6}
+.status strong{color:#f1b9c3}
+.stage{min-height:600px;overflow:auto;padding:30px;background:repeating-linear-gradient(45deg,#101c1f,#101c1f 15px,#142125 15px,#142125 30px);display:flex;justify-content:center;align-items:flex-start}
+.device{width:390px;max-width:none;flex:none;background:#fff;border:6px solid #6f898b;box-shadow:0 22px 60px #0009;position:relative}
+.device:before{content:attr(data-width) ' PX VIEWPORT';position:absolute;top:-27px;left:-6px;color:#eab4c1;font:12px monospace}
+iframe{display:block;width:100%;height:760px;border:0;background:#fff}
+@media(max-width:600px){.stage{justify-content:flex-start;padding:36px 16px}.controls{padding:15px}header{padding:19px 15px}}
+</style>
+</head>
+<body>
+<header><h1>ASBCS / RESPONSIVE PROOFING</h1><p>Design review tool. The website below runs at the selected browser width with its real navigation and interactions.</p></header>
+<div class="controls" role="group" aria-label="Viewport test dimensions">
+<button data-width="360" type="button">Small phone</button>
+<button data-width="390" type="button" aria-pressed="true">Phone</button>
+<button data-width="768" type="button">Tablet</button>
+<button data-width="1024" type="button">Laptop</button>
+<button data-width="1440" type="button">Desktop</button>
+<label for="viewport-slider">Width</label><input type="range" min="320" max="1600" step="1" value="390" id="viewport-slider">
+<select id="page" aria-label="Page to test"><option value="../">Home</option><option value="../about/">About</option><option value="../services/">Services</option><option value="../communities/">Communities</option><option value="../resources/">Resources</option><option value="../contact/">Contact</option></select>
+<span class="status">VIEWPORT <strong id="current-width">390px</strong> · <strong id="overflow-state">checking…</strong></span>
+</div>
+<main class="stage"><div class="device" id="device" data-width="390"><iframe id="viewport" title="Association Services BCS — responsive design at selected width" src="../" loading="eager"></iframe></div></main>
+<script>
+(() => {
+  const frame=document.querySelector('#viewport'),shell=document.querySelector('#device'),slider=document.querySelector('#viewport-slider'),label=document.querySelector('#current-width'),overflow=document.querySelector('#overflow-state');
+  const buttons=[...document.querySelectorAll('[data-width]')].filter(x=>x.tagName==='BUTTON');
+  const setWidth=w=>{
+    const n=Math.max(320,Math.min(1600,Number(w)||390));
+    shell.style.width=(n+12)+'px';shell.dataset.width=n;label.textContent=n+'px';slider.value=n;
+    buttons.forEach(b=>b.setAttribute('aria-pressed',String(Number(b.dataset.width)===n)));
+    requestAnimationFrame(inspect);
+  };
+  const inspect=()=>{
+    try {
+      const doc=frame.contentDocument,win=frame.contentWindow;
+      if(!doc||!win)return;
+      const actual=doc.documentElement.scrollWidth,available=win.innerWidth;
+      overflow.textContent=actual>available+1?'HORIZONTAL OVERFLOW '+actual+'px':'NO HORIZONTAL OVERFLOW';
+    }catch{overflow.textContent='OPEN PAGE TO CHECK'}
+  };
+  buttons.forEach(b=>b.addEventListener('click',()=>setWidth(b.dataset.width)));
+  slider.addEventListener('input',()=>setWidth(slider.value));
+  document.querySelector('#page').addEventListener('change',e=>{frame.src=e.target.value});
+  frame.addEventListener('load',inspect);
+  const watcher=new ResizeObserver(inspect);watcher.observe(shell);
+  setWidth(390);
+})();
+</script>
+</body></html>
