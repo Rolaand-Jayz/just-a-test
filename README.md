@@ -1,25 +1,17 @@
-# Association Services BCS — Full Website Redesign Preview
+# Association Services BCS — Neighborhood Register design preview
 
-[View the browser preview](https://rolaand-jayz.github.io/just-a-test/).
+Public preview: https://rolaand-jayz.github.io/just-a-test/
 
-A cohesive six-page redesign for [Association Services BCS](https://associationservicesbcs.com/) in Bryan–College Station, Texas. This is a review concept; the live business site has not been changed.
+A ground-up responsive redesign concept, visually inspired by local neighborhood records and architectural grids. Six standalone pages share a custom information hierarchy and typography system; light and dark themes default to the visitor's browser preference, with a saved manual toggle.
 
-## Pages
+## Current boundaries
 
-Home, About, Services, Communities, Resources, Contact.
+- This is a **design preview**, not Association Services BCS's production site.
+- Owner authentication, account services and forms continue on the official website, powered by the existing management system (Vantaca). The preview does not replicate or claim any authenticated capability.
+- Original logo, community photography and staff portraits are staged into the deployed Pages artifact by the GitHub Actions workflow. These remain existing assets from associationservicesbcs.com, not AI-generated images.
+- No fabricated maps or community locations. Community directory links open the official directory; local search filters the 22 known names.
+- The preview uses noindex/nofollow to avoid accidental search indexing.
 
-## Design and assets
+## Responsive behavior
 
-The redesign uses the **official horizontal company logo** and **real community and team photography** from the existing website. The GitHub Pages workflow downloads approved public images from the current WordPress media URLs during each build and bundles them with the static preview. This avoids fragile cross-site hotlinks. Confirm appropriate reuse or migrate approved assets to self-hosting before production.
-
-The layout is responsive for desktop, ultrawide, tablet, and phone; it includes accessible mobile navigation, a searchable community directory, and reduced-motion support.
-
-## Working workflows
-
-Owner Portal, Resale Certificate, Architectural Request, community documents, and the contact submission form link to the existing live systems. No fake forms, transactions, or private integrations are reproduced.
-
-## Implementation
-
-Static HTML, CSS, and vanilla JavaScript. No build dependencies. GitHub Pages deploys the `site/` directory using `.github/workflows/pages.yml`.
-
-The prior Rescue 1 Movers snapshot was removed from the current tree as requested, but remains recoverable in Git history.
+Fluid layouts and content-driven CSS breakpoints (1220, 1040, 900, 740, 520 and 350 pixels) preserve navigation, portal links, theme control, community search and resource actions across viewport widths. Reduced-motion and keyboard interaction are supported.
